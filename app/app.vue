@@ -3,7 +3,7 @@ import LinksString from "./components/LinksString.vue";
 </script>
 
 <template>
-  <UApp >
+  <UApp>
     <LinksString />
     <NuxtLayout>
       <NuxtPage />

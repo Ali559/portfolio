@@ -5,9 +5,9 @@ import LogoOutlineIcon from "~/assets/icons/logo-outline-icon.vue";
 <template>
   <section class="relative">
     <div class="p-4 max-w-[1200px] mx-auto">
-      <div class="flex flex-col gap-8 items-center justify-center lg:flex-row">
+      <div class="w-full flex flex-col gap-8 lg:flex-row">
         <!-- Hero Text -->
-        <div class="text-left text-wrap">
+        <div class="text-left text-wrap lg:w-1/2">
           <h1 class="text-[32px] font-semibold text-left text-wrap">
             Ali is a <span class="text-primary">Fullstack Engineer</span> and a
             <span class="text-primary">Programming Enthusiast</span>

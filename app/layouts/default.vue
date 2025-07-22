@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div class="overflow-x-hidden max-w-[1070px] mx-auto">
     <div
       class="transition-transform duration-300 ease-in-out"
       :class="isMenuOpen ? 'translate-x-full' : 'translate-x-0'"
@@ -10,7 +10,7 @@
       />
       <slot />
     </div>
-    
+
     <!-- Mobile Menu -->
     <div
       class="absolute top-0 -left-[100%] h-screen w-full transition-all duration-300 ease-in-out z-10 p-4"
