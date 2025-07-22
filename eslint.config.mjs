@@ -12,6 +12,7 @@ export default withNuxt(
       "vue/no-unused-properties": "error",
       "vue/no-unused-components": "error",
       "vue/no-unused-vars": "error",
+      "vue/html-self-closing": "off",
     },
   },
 );

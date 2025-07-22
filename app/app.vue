@@ -3,9 +3,9 @@ import LinksString from "./components/LinksString.vue";
 </script>
 
 <template>
-  <UApp class="bg-background">
+  <UApp >
     <LinksString />
-    <NuxtLayout name="header">
+    <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
   </UApp>
