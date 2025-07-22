@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme static {
+  --ui-primary: #c778dd;
+  --ui-secondary: #abb2bf;
+  --ui-background: #282c33;
+}
+
+html {
+  font-family: "Fira Code", monospace;
+}

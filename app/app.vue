@@ -1,6 +1,12 @@
+<script setup lang="ts">
+import LinksString from "./components/LinksString.vue";
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <UApp class="bg-background">
+    <LinksString />
+    <NuxtLayout name="header">
+      <NuxtPage />
+    </NuxtLayout>
+  </UApp>
 </template>
