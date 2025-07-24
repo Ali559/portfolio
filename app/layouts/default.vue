@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-x-hidden max-w-[1070px] mx-auto">
+  <div class="overflow-x-hidden">
     <div
       class="transition-transform duration-300 ease-in-out"
       :class="isMenuOpen ? 'translate-x-full' : 'translate-x-0'"
