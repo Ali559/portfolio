@@ -25,8 +25,10 @@ const links: Link[] = [
 const emit = defineEmits(["toggleMenu"]);
 </script>
 <template>
-  <div class="overflow-x-hidden">
-    <header class="bg-transparent w-[70%] p-8 mx-auto hidden lg:block">
+  <div class="overflow-x-hidden sticky top-0 z-10">
+    <header
+      class="bg-transparent w-[70%] p-8 mx-auto hidden lg:block bg:[--ui-background]"
+    >
       <nav class="w-full flex items-center">
         <button class="flex items-center gap-1 bg-transparent">
           <LogoFilledIcon class="w-4 h-4" />
@@ -47,7 +49,7 @@ const emit = defineEmits(["toggleMenu"]);
     </header>
 
     <header
-      class="bg-transparent w-full p-4 lg:hidden transition-all duration-300 ease-in-out"
+      class="bg-transparent w-full p-4 lg:hidden transition-all duration-300 ease-in-out bg:[--ui-background]"
     >
       <nav class="flex items-center justify-between">
         <button class="flex items-center gap-2 cursor-pointer">
