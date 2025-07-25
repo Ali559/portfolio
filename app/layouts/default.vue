@@ -63,7 +63,7 @@ import MailIcon from "~/assets/icons/mail-icon.vue";
 import type { Link } from "~/types";
 import XIcon from "~/assets/icons/X-icon.vue";
 import LogoFilledIcon from "~/assets/icons/logo-filled-icon.vue";
-const HeaderLayout = defineAsyncComponent(() => import("~/layouts/header.vue"));
+const HeaderLayout = defineAsyncComponent(() => import("~/layouts/Header.vue"))
 
 const socialLinks = [
   {
