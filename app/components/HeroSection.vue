@@ -25,7 +25,7 @@ const HalfSquareIcon = defineAsyncComponent(
           </p>
 
           <div class="mt-6">
-            <MainButton text="Contact me!!" to="/contact" />
+            <MainButton text="Contact me!!" to="/contacts" />
           </div>
         </div>
 
