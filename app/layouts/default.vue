@@ -13,7 +13,7 @@
 
     <!-- Mobile Menu -->
     <div
-      class="absolute top-0 -left-[100%] h-screen w-full transition-all duration-300 ease-in-out z-10 p-4"
+      class="absolute top-0 -left-[100%] w-full h-[100vh] transition-all duration-300 ease-in-out z-10 p-4 overflow-hidden"
       :class="isMenuOpen ? 'left-0' : ''"
     >
       <div class="relative w-full h-full">
@@ -41,7 +41,7 @@
         </ul>
       </div>
       <div
-        class="fixed bottom-20 flex items-center justify-center gap-4 w-full"
+        class="sticky bottom-20 flex items-center justify-center gap-4 w-full"
       >
         <NuxtLink
           v-for="link in socialLinks"
@@ -102,4 +102,12 @@ const links: Link[] = [
   },
 ];
 const isMenuOpen = ref<boolean>(false);
+
+watch(isMenuOpen, (newVal) => {
+  if (newVal) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+});
 </script>
