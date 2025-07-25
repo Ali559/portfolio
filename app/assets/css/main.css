@@ -15,4 +15,5 @@ body {
   background-color: var(--ui-background);
   font-family: "Fira Code", monospace;
   scroll-behavior: smooth;
+  overflow-x:hidden;
 }

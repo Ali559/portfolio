@@ -9,6 +9,12 @@
 
     <!-- Skills Section -->
     <SkillsSection />
+
+    <!-- About me Section -->
+    <AboutMeSection />
+
+    <!-- Contact Section -->
+    <ContactSection />
   </div>
 </template>
 

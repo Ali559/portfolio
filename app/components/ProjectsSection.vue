@@ -36,7 +36,7 @@
         <!-- View All -->
         <NuxtLink
           to="/projects"
-          class="font-medium text-base transition-all duration-500 ease-in-out hover:scale-105"
+          class="text-white font-medium text-base transition-all duration-500 ease-in-out hover:scale-105 "
           >View all ~~>
         </NuxtLink>
       </div>

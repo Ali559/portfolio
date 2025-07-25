@@ -71,14 +71,14 @@ const skills: ISkills[] = [
           <span class="text-primary">#</span>skills
         </h2>
         <!-- Line -->
-        <div class="h-[1px] w-xl bg-primary"></div>
+        <div class="h-[1px] w-lg bg-primary"></div>
       </div>
 
       <!-- Cards -->
       <div class="flex flex-col gap-16 mt-4 w-full lg:flex-row">
         <GroupIcon class="w-2/3 h-full mx-auto lg:w-full" />
 
-        <div class="mt-10 grid gap-4 grid-cols-1 sm:grid-cols-3">
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-3">
           <SkillCard
             v-for="(skill, index) in skills"
             :key="index"
