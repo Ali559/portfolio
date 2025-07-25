@@ -7,7 +7,7 @@ const HalfSquareIcon = defineAsyncComponent(
 );
 </script>
 <template>
-  <section class="relative">
+  <section id="home" class="relative">
     <HalfSquareIcon class="absolute bottom-0 -right-0 hidden lg:block" />
 
     <div class="max-w-[1070px] mx-auto px-4 py-20">

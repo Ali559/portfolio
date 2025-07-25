@@ -63,7 +63,7 @@ const skills: ISkills[] = [
 </script>
 
 <template>
-  <section class="relative">
+  <section id="skills" class="relative">
     <div class="max-w-[1070px] mx-auto px-4 py-20">
       <!-- Header Section -->
       <div class="flex items-center gap-4">
@@ -76,7 +76,7 @@ const skills: ISkills[] = [
 
       <!-- Cards -->
       <div class="flex flex-col gap-16 mt-4 w-full lg:flex-row">
-        <GroupIcon class="w-2/3 h-full mx-auto lg:w-1/3" />
+        <GroupIcon class="w-2/3 h-full mx-auto lg:w-full" />
 
         <div class="mt-10 grid gap-4 grid-cols-1 sm:grid-cols-3">
           <SkillCard

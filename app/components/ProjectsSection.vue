@@ -1,5 +1,5 @@
 <template>
-  <section class="relative">
+  <section id="projects" class="relative">
     <DotsIcon
       class="absolute -left-12 top-1/2 translate-y-1/2 hidden lg:block"
     />

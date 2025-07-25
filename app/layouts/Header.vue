@@ -6,19 +6,23 @@ import type { Link } from "~/types";
 const links: Link[] = [
   {
     name: "home",
-    path: "/",
+    path: "#home",
   },
   {
     name: "about-me",
-    path: "/about-me",
+    path: "#about-me",
   },
   {
     name: "works",
-    path: "/works",
+    path: "#projects",
   },
   {
-    name: "contact",
-    path: "/contact",
+    name: "contacts",
+    path: "#contacts",
+  },
+  {
+    name: "skills",
+    path: "#skills",
   },
 ];
 
@@ -54,7 +58,7 @@ const emit = defineEmits(["toggleMenu"]);
       <nav class="flex items-center justify-between">
         <button class="flex items-center gap-2 cursor-pointer">
           <LogoFilledIcon class="h-4 w-4" />
-          <h1 class="text-base font-bold text-white">Ali</h1>
+          <h1 class="text-base font-bold text-white">Ali</h1> 
         </button>
         <button class="cursor-pointer" @click="emit('toggleMenu')">
           <MenuTriggerIcon />
