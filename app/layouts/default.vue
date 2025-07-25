@@ -63,7 +63,7 @@ import MailIcon from "~/assets/icons/mail-icon.vue";
 import type { Link } from "~/types";
 import XIcon from "~/assets/icons/X-icon.vue";
 import LogoFilledIcon from "~/assets/icons/logo-filled-icon.vue";
-const HeaderLayout = defineAsyncComponent(() => import("~/layouts/Header.vue"))
+const HeaderLayout = defineAsyncComponent(() => import("~/layouts/Header.vue"));
 
 const socialLinks = [
   {
@@ -86,19 +86,23 @@ const socialLinks = [
 const links: Link[] = [
   {
     name: "home",
-    path: "/",
+    path: "#home",
   },
   {
     name: "about-me",
-    path: "/about-me",
+    path: "#about-me",
   },
   {
     name: "works",
-    path: "/works",
+    path: "#projects",
   },
   {
-    name: "contact",
-    path: "/contact",
+    name: "contacts",
+    path: "#contacts",
+  },
+  {
+    name: "skills",
+    path: "#skills",
   },
 ];
 const isMenuOpen = ref<boolean>(false);

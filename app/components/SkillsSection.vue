@@ -67,7 +67,7 @@ const skills: ISkills[] = [
     <div class="max-w-[1070px] mx-auto px-4 py-20">
       <!-- Header Section -->
       <div class="flex items-center gap-4">
-        <h2 class="text-3xl font-medium">
+        <h2 class="text-3xl font-medium text-white">
           <span class="text-primary">#</span>skills
         </h2>
         <!-- Line -->

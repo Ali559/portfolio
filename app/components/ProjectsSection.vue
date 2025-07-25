@@ -27,7 +27,7 @@
       <!-- Header Section -->
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-4">
-          <h2 class="text-3xl font-medium">
+          <h2 class="text-3xl font-medium text-white">
             <span class="text-primary">#</span>projects
           </h2>
           <!-- Line -->

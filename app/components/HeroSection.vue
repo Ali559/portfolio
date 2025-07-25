@@ -15,7 +15,7 @@ const HalfSquareIcon = defineAsyncComponent(
       <div class="w-full flex flex-col gap-8 md:flex-row md:items-center">
         <!-- Hero Text -->
         <div class="text-left text-wrap md:w-1/2">
-          <h1 class="text-[32px] font-semibold text-left text-wrap">
+          <h1 class="text-[32px] font-semibold text-left text-wrap text-white">
             Ali is a <span class="text-primary">Fullstack Engineer</span> and a
             <span class="text-primary">Programming Enthusiast</span>
           </h1>
