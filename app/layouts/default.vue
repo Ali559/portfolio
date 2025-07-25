@@ -58,12 +58,12 @@
 
 <script setup lang="ts">
 import GithubIcon from "~/assets/icons/github-icon.vue";
-import HeaderLayout from "./header.vue";
 import LinkedinIcon from "~/assets/icons/linkedin-icon.vue";
 import MailIcon from "~/assets/icons/mail-icon.vue";
 import type { Link } from "~/types";
 import XIcon from "~/assets/icons/X-icon.vue";
 import LogoFilledIcon from "~/assets/icons/logo-filled-icon.vue";
+const HeaderLayout = defineAsyncComponent(() => import("~/layouts/header.vue"));
 
 const socialLinks = [
   {
