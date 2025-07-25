@@ -106,8 +106,8 @@ const links: Link[] = [
     path: "#about-me",
   },
   {
-    name: "contacts",
     path: "#contacts",
+    name: "contacts",
   },
 ];
 const isMenuOpen = ref<boolean>(false);
