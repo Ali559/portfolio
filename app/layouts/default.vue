@@ -4,6 +4,7 @@
       class="transition-transform duration-300 ease-in-out"
       :class="isMenuOpen ? 'translate-x-full' : 'translate-x-0'"
     >
+      <SpeedInsights />
       <HeaderLayout
         :is-menu-open="isMenuOpen"
         @toggle-menu="isMenuOpen = !isMenuOpen"
@@ -35,6 +36,7 @@
               :to="link.path"
               active-class="text-white"
               class="text-[#ABB2BF] hover:text-white text-3xl font-medium"
+              @click.capture="isMenuOpen = false"
             >
               <span class="text-primary">#</span>{{ link.name }}
             </NuxtLink>
@@ -58,6 +60,7 @@
 </template>
 
 <script setup lang="ts">
+import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 import GithubIcon from "~/assets/icons/github-icon.vue";
 import LinkedinIcon from "~/assets/icons/linkedin-icon.vue";
 import MailIcon from "~/assets/icons/mail-icon.vue";
@@ -91,20 +94,20 @@ const links: Link[] = [
     path: "#home",
   },
   {
-    name: "about-me",
-    path: "#about-me",
-  },
-  {
     name: "works",
     path: "#projects",
   },
   {
-    name: "contacts",
-    path: "#contacts",
-  },
-  {
     name: "skills",
     path: "#skills",
+  },
+  {
+    name: "about-me",
+    path: "#about-me",
+  },
+  {
+    name: "contacts",
+    path: "#contacts",
   },
 ];
 const isMenuOpen = ref<boolean>(false);
