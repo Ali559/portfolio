@@ -11,3 +11,8 @@ export interface IProject {
     link?: string;
     previewImage?: string;
 }
+
+export interface ISkills {
+    category: 'Languages' | 'Frameworks' | 'Tools' | 'Databases' | 'Other';
+    skills: string[]
+}

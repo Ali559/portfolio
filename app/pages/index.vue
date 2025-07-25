@@ -6,6 +6,9 @@
 
     <!-- Projects Section -->
     <ProjectsSection />
+
+    <!-- Skills Section -->
+    <SkillsSection />
   </div>
 </template>
 

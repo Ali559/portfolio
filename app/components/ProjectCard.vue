@@ -1,5 +1,5 @@
 <template>
-  <div class="border-1 boreder-secondary max-w-82.5 cursor-pointer">
+  <div class="border-1 border-secondary cursor-pointer">
     <img
       v-if="image"
       :src="image"
