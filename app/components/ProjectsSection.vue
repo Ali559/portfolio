@@ -36,13 +36,13 @@
         <!-- View All -->
         <NuxtLink
           to="/projects"
-          class="text-white font-medium text-base transition-all duration-500 ease-in-out hover:scale-105 "
+          class="text-white font-medium text-base transition-all duration-500 ease-in-out hover:scale-105"
           >View all ~~>
         </NuxtLink>
       </div>
 
       <!-- Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-12 ">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
         <ProjectCard
           v-for="(project, index) in data"
           :key="index"
