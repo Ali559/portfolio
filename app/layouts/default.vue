@@ -44,7 +44,7 @@
         </ul>
       </div>
       <div
-        class="sticky bottom-20 flex items-center justify-center gap-4 w-full"
+        class="fixed bottom-20 flex items-center justify-center gap-4 w-full"
       >
         <NuxtLink
           v-for="link in socialLinks"
