@@ -15,7 +15,7 @@
 
     <!-- Mobile Menu -->
     <div
-      class="fixed top-0 -left-[100%] w-full h-[100vh] transition-all duration-300 ease-in-out z-10 p-4 overflow-hidden"
+      class="fixed top-0 -left-[100%] w-full bottom-0 transition-all duration-300 ease-in-out z-10 p-4 overflow-hidden"
       :class="isMenuOpen ? 'left-0' : ''"
     >
       <div class="relative w-full h-full">
