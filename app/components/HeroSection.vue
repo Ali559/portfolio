@@ -10,7 +10,7 @@ const HalfSquareIcon = defineAsyncComponent(
   <section class="relative">
     <HalfSquareIcon class="absolute bottom-0 -right-0 hidden lg:block" />
 
-    <div class="max-w-[1070px] mx-auto p-4 py-20">
+    <div class="max-w-[1070px] mx-auto px-4 py-20">
       <!-- Hero Content -->
       <div class="w-full flex flex-col gap-8 md:flex-row md:items-center">
         <!-- Hero Text -->
@@ -33,7 +33,7 @@ const HalfSquareIcon = defineAsyncComponent(
         <div class="relative md:w-1/2">
           <img src="~/assets/img/hero.png" alt="hero image" />
           <div
-            class="z-100 absolute w-full mx-auto right-1/2 translate-x-1/2 bottom-0 border-[1px] border-secondary p-2 flex items-center gap-4 justify-start bg-[var(--ui-background)]"
+            class="z-20 absolute w-full mx-auto right-1/2 translate-x-1/2 bottom-0 border-[1px] border-secondary p-2 flex items-center gap-4 justify-start bg-[var(--ui-background)]"
           >
             <div class="h-4 w-4 bg-primary"></div>
             <span class="text-secondary"

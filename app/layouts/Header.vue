@@ -25,7 +25,7 @@ const links: Link[] = [
 const emit = defineEmits(["toggleMenu"]);
 </script>
 <template>
-  <div class="overflow-x-hidden sticky top-0 z-10">
+  <div class="overflow-x-hidden sticky top-0 z-30">
     <header
       class="bg-transparent w-[70%] p-8 mx-auto hidden lg:block bg:[--ui-background]"
     >

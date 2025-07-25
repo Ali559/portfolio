@@ -3,6 +3,9 @@
   <div class="@container">
     <!-- Hero Section -->
     <HeroSection />
+
+    <!-- Projects Section -->
+    <ProjectsSection />
   </div>
 </template>
 
