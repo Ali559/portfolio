@@ -1,3 +1,10 @@
+import type { IProject, Link } from "~/types";
+import InzpiriImage from "~/assets/img/projects/inzpiri.png";
+import SmartPricerImage from "~/assets/img/projects/smart-pricer.png";
+import SeeYouImage from "~/assets/img/projects/seeyou.png";
+import WizRXImage from "~/assets/img/projects/wizrx.jpg";
+import WiZRXPreviewImage from "~/assets/img/projects/previews/wizrx.jpg";
+
 export const introText = `I'm a software engineer with over 5 years of experience working across
           the full-stack, from frontend frameworks like React and Vue to
           backend systems with Node.js and Golang. I've had the opportunity to
@@ -24,3 +31,217 @@ export const introTextAll = `I'm a software engineer with over 5 years of experi
 
 
 export const contactText = `I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me`
+
+
+
+
+export const projects: IProject[] = [
+    {
+        name: 'Portfolio',
+        image: InzpiriImage,
+        description: "My Personal Portfolio",
+        link: "https://alibarznji.dev",
+        tags: [
+            "Vuejs",
+            "Nuxtjs",
+            "SEO",
+            "Tailwindcss",
+            "Vite",
+            "Github",
+            "Git",
+            "Figma",
+            "Typescript",
+            "Vercel",
+        ],
+    },
+    {
+        name: "Inzpiri (In progress)",
+        image: InzpiriImage,
+        description: "Online Education Platform for Teachers and Students",
+        link: "https://beta.inzpiri.com",
+        tags: [
+            "Vuejs",
+            "Tailwindcss",
+            "Vite",
+            "AWS",
+            "Github",
+            "Git",
+            "Figma",
+            "Go",
+            "MongoDB",
+            "Docker",
+            "Redis",
+            "Typescript",
+        ],
+    },
+    {
+        name: "WiZRX",
+        image: WizRXImage,
+        description:
+            "collaboration tool designed to empower businesses by streamlining communication and strengthening internal connections.",
+        link: "https://masterwizr.com/wizr-x/",
+        tags: [
+            "Reactjs",
+            "PostCSS",
+            "Vite",
+            "AWS",
+            "Github",
+            "Git",
+            "Figma",
+            "Go",
+            "Nestjs",
+            "MongoDB",
+            "Socket.io",
+            "Typescript",
+        ],
+        previewImage: WiZRXPreviewImage,
+    },
+    {
+        name: "Smart Pricer",
+        image: SmartPricerImage,
+        description:
+            "Ticketing and Price Analytics as well as Dynamic Pricing based on Data Science for Ski Resorts, Sports, Cinema and Entertainment.",
+        link: "https://www.smart-pricer.com/",
+        tags: [
+            "Nodejs",
+            "Express",
+            "Typescript",
+            "MongoDB",
+            "Proxy",
+            "JWT",
+            "Redis",
+            "Git",
+            "Github",
+            "Swagger",
+        ],
+    },
+    {
+        name: "SEEYOU",
+        image: SeeYouImage,
+        description:
+            "A Modern All in one Communication Platform for Teams and Individuals.",
+        link: "https://www.smart-pricer.com/",
+        tags: [
+            "Nodejs",
+            "Express",
+            "Typescript",
+            "MongoDB",
+            "Proxy",
+            "JWT",
+            "Redis",
+            "Git",
+            "Github",
+            "Swagger",
+        ],
+    },
+];
+
+export const smallProjects: IProject[] = [
+    {
+        name: 'Strongly typed Env',
+        description: 'A powerful, type-safe environment configuration library for Node.js applications that automatically generates TypeScript types from your environment files.',
+        link: 'https://github.com/ali559/strongly-typed-env',
+        tags: [
+            'Nodejs',
+            'CI/CD',
+            'Semver',
+            'Typescript',
+            'NPM',
+            'Git',
+            'Github',
+        ],
+        linkText: 'github <~>'
+    },
+    {
+        name: 'CDN Checker',
+        description: 'A Visual Studio Code extension that helps you identify broken, redirecting, or oversized external links in your project files. Perfect for maintaining healthy CDN references, image links, video embeds, and other external resources.',
+        link: 'https://github.com/Ali559/cdn-checker',
+        tags: [
+            'Nodejs',
+            'Typescript',
+            'VSCE',
+            'Git',
+            'Github',
+        ],
+        linkText: 'github <~>',
+    },
+    {
+        name: 'SEEYOU Chat',
+        description: 'An API based integration with Slack and Telegram for the SEEYOU platform',
+        tags: [
+            'React',
+            'Nodejs',
+            'Typescript',
+            'Git',
+            'Github',
+            'Swagger',
+            'Nestjs',
+            'Websocket',
+            'Redis',
+            'Slac API',
+            'Telegram API',
+        ],
+    },
+    {
+        name: 'Wizr Chat',
+        description: 'A Chat System for the WiZRX platform',
+        tags: [
+            'React',
+            'Nodejs',
+            'Typescript',
+            'Zustand',
+            'Git',
+            'Github',
+            'Express',
+            'Websocket',
+            'Socket.io',
+            'MongoDB',
+        ],
+    },
+    {
+        name: 'Gym Management System',
+        description: 'A Modern Gym Management System',
+        tags: [
+            '.NET',
+            'C#',
+            'SQL Server',
+            'SQL',
+            'OOP'
+        ],
+    },
+    {
+        name: 'Grades App',
+        description: 'A Grades platform for highschool graduates to easily pick the best university for them based on their grades and preferences',
+        tags: [
+            '.NET',
+            'C#',
+            'SQL Server',
+            'SQL',
+            'OOP',
+            'SQLITE',
+        ],
+    }
+]
+
+export const links: Link[] = [
+    {
+        name: "home",
+        path: "#home",
+    },
+    {
+        name: "works",
+        path: "#projects",
+    },
+    {
+        name: "skills",
+        path: "#skills",
+    },
+    {
+        name: "about-me",
+        path: "#about-me",
+    },
+    {
+        path: "#contacts",
+        name: "contacts",
+    },
+];

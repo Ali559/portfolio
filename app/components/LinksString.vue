@@ -24,7 +24,7 @@ const socialLinks = [
 
 <template>
   <div
-    class="absolute left-20 top-0 flex-col justify-center items-center h-78 hidden lg:flex z-100"
+    class="absolute left-20 top-0 flex-col justify-center items-center h-78 hidden xl:flex z-100"
   >
     <!-- Line -->
     <div class="w-0.5 h-2/3 bg-secondary" />

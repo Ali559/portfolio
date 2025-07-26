@@ -64,10 +64,10 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 import GithubIcon from "~/assets/icons/github-icon.vue";
 import LinkedinIcon from "~/assets/icons/linkedin-icon.vue";
 import MailIcon from "~/assets/icons/mail-icon.vue";
-import type { Link } from "~/types";
 import XIcon from "~/assets/icons/X-icon.vue";
 import LogoFilledIcon from "~/assets/icons/logo-filled-icon.vue";
 import FooterLayout from "./Footer.vue";
+import { links } from "~/data";
 const HeaderLayout = defineAsyncComponent(() => import("~/layouts/Header.vue"));
 
 const socialLinks = [
@@ -88,28 +88,7 @@ const socialLinks = [
   },
 ];
 
-const links: Link[] = [
-  {
-    name: "home",
-    path: "#home",
-  },
-  {
-    name: "works",
-    path: "#projects",
-  },
-  {
-    name: "skills",
-    path: "#skills",
-  },
-  {
-    name: "about-me",
-    path: "#about-me",
-  },
-  {
-    path: "#contacts",
-    name: "contacts",
-  },
-];
+
 const isMenuOpen = ref<boolean>(false);
 
 watch(isMenuOpen, (newVal) => {

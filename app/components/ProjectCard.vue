@@ -22,7 +22,11 @@
       <h3 class="text-white font-medium text-2xl">{{ name }}</h3>
       <p class="text-secondary font-normal text-base mt-4">{{ description }}</p>
       <div class="mt-4 flex items-center gap-2">
-        <MainButton v-if="link" text="Live <~>" :to="link" />
+        <MainButton
+          v-if="link"
+          :text="linkText ? linkText : 'Live <~>'"
+          :to="link"
+        />
         <MainButton
           v-if="previewImage"
           text="Cached >="

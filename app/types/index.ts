@@ -7,9 +7,10 @@ export interface IProject {
     name: string;
     tags: string[];
     description: string;
-    image: string;
+    image?: string;
     link?: string;
     previewImage?: string;
+    linkText?: string;
 }
 
 export interface ISkills {
