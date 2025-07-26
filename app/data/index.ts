@@ -30,7 +30,7 @@ export const introTextAll = `I'm a software engineer with over 5 years of experi
 
 
 
-export const contactText = `I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me`
+export const contactText = `I’m interested in freelance opportunities. However, if you have other requests or a question, don’t hesitate to contact me`
 
 
 
@@ -326,8 +326,7 @@ export const factsAboutMe: IFacts[] = [
         highlightedParts: ["open-source"],
     },
     {
-        text: `I can't live withou comedy`,
+        text: `I can't live without comedy`,
         highlightedParts: ["comedy"],
     }
-
 ]

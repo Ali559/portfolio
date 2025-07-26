@@ -30,7 +30,6 @@
         <MainButton
           v-if="previewImage"
           text="Cached >="
-          :to="previewImage"
           class="border-secondary hover:bg-secondary hover:text-white"
           @click.capture="() => $emit('preview', previewImage as string)"
         />

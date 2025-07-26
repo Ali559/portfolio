@@ -11,14 +11,26 @@
     <Transition :duration="500" name="fade" class=".fade">
       <div
         v-if="preview && previewImage"
-        class="backdrop-blur-2xl top-0 fixed w-full h-full z-50"
+        class="fixed top-0 bottom-0 inset-0 z-50 backdrop-blur-2xl"
         @click="preview = false"
       >
-        <img
-          :src="previewImage"
-          alt="Preview Image"
-          class="w-xl mx-auto h-full"
-        />
+        <div class="relative">
+          <div
+            class="overflow-y-auto h-[100vh] w-[90%] mx-auto relative no-scrollbar"
+          >
+            <button
+              class="absolute top-4 right-4 cursor-pointer p-2"
+              @click="preview = false"
+            >
+              <XIcon />
+            </button>
+            <img
+              :src="previewImage"
+              alt="Preview Image"
+              class="h-auto w-full"
+            />
+          </div>
+        </div>
       </div>
     </Transition>
 
@@ -67,6 +79,7 @@ const DotsIcon = defineAsyncComponent(
 const HalfSquareIcon = defineAsyncComponent(
   () => import("~/assets/icons/Half-square-icon.vue"),
 );
+const XIcon = defineAsyncComponent(() => import("~/assets/icons/X-icon.vue"));
 
 const preview = ref<boolean>(false);
 const previewImage = ref<string | null>(null);
@@ -97,5 +110,12 @@ defineProps<Props>();
 .fade-enter-to,
 .fade-leave-from {
   opacity: 1;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 </style>
