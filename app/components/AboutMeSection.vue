@@ -5,12 +5,12 @@
     />
     <div class="max-w-[1070px] mx-auto px-4 py-20">
       <!-- Header Section -->
-      <div class="flex items-center gap-4">
-        <h2 class="text-3xl font-medium text-white">
-          <span class="text-primary">#</span>about
+      <div v-if="sectionTitle || line" class="flex items-center gap-4">
+        <h2 v-if="sectionTitle" class="text-3xl font-medium text-white">
+          <span class="text-primary">#</span>{{ sectionTitle }}
         </h2>
         <!-- Line -->
-        <div class="h-[1px] w-xl bg-primary"></div>
+        <div v-if="line" class="h-[1px] w-xl bg-primary"></div>
       </div>
 
       <!-- Main Content -->
@@ -21,13 +21,13 @@
           class="w-1/2 mx-auto lg:hidden"
         />
         <div class="mt-5.5 text-left text-wrap lg:w-2/3">
-          <p class="text-secondary text-xl">Hello, I'm Ali</p>
+          <p class="text-secondary text-base leading-7">Hello, I'm Ali!</p>
           <br /><br />
-          <p class="text-secondary text-xl">
-            {{ introText }}
+          <p class="text-secondary text-base leading-7">
+            {{ data }}
           </p>
 
-          <div class="mt-8">
+          <div v-if="readMore" class="mt-8">
             <MainButton text="Read more ->" to="/about" />
           </div>
         </div>
@@ -42,8 +42,15 @@
 </template>
 
 <script setup lang="ts">
-import { introText } from "~/data";
 const DotsIcon = defineAsyncComponent(
   () => import("~/assets/icons/dots-icon.vue"),
 );
+
+interface Props {
+  sectionTitle?: string;
+  line: boolean;
+  data: string;
+  readMore: boolean;
+}
+defineProps<Props>();
 </script>

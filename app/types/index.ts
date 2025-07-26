@@ -17,3 +17,8 @@ export interface ISkills {
     category: 'Languages' | 'Frameworks' | 'Tools' | 'Databases' | 'Other';
     skills: string[]
 }
+
+export interface IFacts {
+    text: string;
+    highlightedParts: string[];
+}

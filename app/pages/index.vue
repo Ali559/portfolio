@@ -5,6 +5,7 @@ import SmartPricerImage from "~/assets/img/projects/smart-pricer.png";
 import SeeYouImage from "~/assets/img/projects/seeyou.png";
 import WizRXImage from "~/assets/img/projects/wizrx.jpg";
 import WiZRXPreviewImage from "~/assets/img/projects/previews/wizrx.jpg";
+import { introText, skills } from "~/data";
 
 const projects: IProject[] = [
   {
@@ -103,10 +104,15 @@ const projects: IProject[] = [
     />
 
     <!-- Skills Section -->
-    <SkillsSection />
+    <SkillsSection
+      :skills="skills"
+      :group-icon="true"
+      :line="true"
+      :section-title="'skills'"
+    />
 
     <!-- About me Section -->
-    <AboutMeSection />
+    <AboutMeSection :data="introText" :line="true" :read-more="true" />
 
     <!-- Contact Section -->
     <ContactSection />

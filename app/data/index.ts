@@ -1,4 +1,4 @@
-import type { IProject, Link } from "~/types";
+import type { IFacts, IProject, ISkills, Link } from "~/types";
 import InzpiriImage from "~/assets/img/projects/inzpiri.png";
 import SmartPricerImage from "~/assets/img/projects/smart-pricer.png";
 import SeeYouImage from "~/assets/img/projects/seeyou.png";
@@ -245,3 +245,89 @@ export const links: Link[] = [
         name: "contacts",
     },
 ];
+
+export const skills: ISkills[] = [
+    {
+        category: "Languages",
+        skills: ["TypeScript", "JavaScript", "Go", "C#"],
+    },
+    {
+        category: "Frameworks",
+        skills: [
+            "Vue",
+            "Nuxt",
+            "React",
+            "Next",
+            "Svelte",
+            "Nestjs",
+            "Fastify",
+            "Express",
+            "Chi",
+            ".NET",
+        ],
+    },
+    {
+        category: "Tools",
+        skills: [
+            "Git",
+            "NPM",
+            "Docker",
+            "Postman",
+            "Swagger",
+            "Figma",
+            "Vercel",
+            "AWS",
+            "VSCode",
+            "GraphQL",
+        ],
+    },
+    {
+        category: "Databases",
+        skills: [
+            "MongoDB",
+            "Redis",
+            "PostgreSQL",
+            "MySQL",
+            "SQLite",
+            "DynamoDB",
+            "MSSQL",
+        ],
+    },
+    {
+        category: "Other",
+        skills: ["CSS", "HTML", "Tailwind", "Jest", "Vitest", "API Dev", "TDD"],
+    },
+];
+
+
+export const factsAboutMe: IFacts[] = [
+    {
+        text: `My favourite movie is Inglorious Bastards`,
+        highlightedParts: ["Inglorious Bastards"],
+    },
+    {
+        text: `I've only been to the Cinema once (maybe not such a fun fact lol)`,
+        highlightedParts: ["Cinema"],
+    },
+    {
+        text: `I wanted to be a musician when I was a kid, but I never got the chance to do it`,
+        highlightedParts: ["musician"],
+    },
+    {
+        text: `I was born in the year 2000`,
+        highlightedParts: ["2000"],
+    },
+    {
+        text: `My favourite game is Red Dead Redemption 2`,
+        highlightedParts: ["Red Dead Redemption 2"],
+    },
+    {
+        text: `I'm a big fan of open-source projects`,
+        highlightedParts: ["open-source"],
+    },
+    {
+        text: `I can't live withou comedy`,
+        highlightedParts: ["comedy"],
+    }
+
+]
