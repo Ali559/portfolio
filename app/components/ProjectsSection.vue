@@ -11,13 +11,13 @@
     <Transition :duration="500" name="fade" class=".fade">
       <div
         v-if="preview && previewImage"
-        class="backdrop-blur-2xl fixed top-0 left-0 w-full h-full z-20 overflow-y-scroll"
+        class="backdrop-blur-2xl fixed w-full h-full z-50"
         @click="preview = false"
       >
         <img
           :src="previewImage"
           alt="Preview Image"
-          class="w-2/3 mx-auto h-full object-contain"
+          class="w-full mx-auto h-full"
         />
       </div>
     </Transition>
