@@ -22,3 +22,10 @@ export interface IFacts {
     text: string;
     highlightedParts: string[];
 }
+
+export interface ISocials {
+    name: string;
+    link: string;
+    icon: Component;
+    username: string;
+}

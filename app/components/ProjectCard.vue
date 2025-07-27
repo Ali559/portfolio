@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import type { IProject } from "~/types";
+const MainButton = defineAsyncComponent(
+  () => import("~/components/MainButton.vue"),
+);
+defineProps<IProject>();
+defineEmits(["preview"]);
+</script>
+
 <template>
   <div class="border-1 border-secondary cursor-pointer">
     <img
@@ -37,12 +46,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import type { IProject } from "~/types";
-const MainButton = defineAsyncComponent(
-  () => import("~/components/MainButton.vue"),
-);
-defineProps<IProject>();
-defineEmits(["preview"]);
-</script>

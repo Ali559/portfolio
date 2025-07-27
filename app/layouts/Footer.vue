@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import DotsIcon from "~/assets/icons/dots-icon.vue";
 import GithubIcon from "~/assets/icons/github-icon.vue";
 import LinkedinIcon from "~/assets/icons/linkedin-icon.vue";
 import LogoFilledIcon from "~/assets/icons/logo-filled-icon.vue";
@@ -23,8 +24,8 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="py-8 border-t-1 border-secondary">
-    <div class="max-w-[1070px] mx-auto px-4">
+  <footer class="border-t-1 border-secondary relative">
+    <div class="max-w-[1070px] mx-auto px-4 py-8">
       <div
         class="w-full flex flex-col gap-16 sm:flex-row sm:justify-between sm:gap-0"
       >
@@ -67,5 +68,6 @@ const socialLinks = [
         © Copyright 2025. Made by Ali
       </p>
     </div>
+    <DotsIcon class="absolute -right-10 -bottom-20 hidden xl:block" />
   </footer>
 </template>

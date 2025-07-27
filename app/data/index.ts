@@ -1,9 +1,12 @@
-import type { IFacts, IProject, ISkills, Link } from "~/types";
+import type { IFacts, IProject, ISkills, ISocials, Link } from "~/types";
 import InzpiriImage from "~/assets/img/projects/inzpiri.png";
 import SmartPricerImage from "~/assets/img/projects/smart-pricer.png";
 import SeeYouImage from "~/assets/img/projects/seeyou.png";
 import WizRXImage from "~/assets/img/projects/wizrx.jpg";
 import WiZRXPreviewImage from "~/assets/img/projects/previews/wizrx.jpg";
+import GithubIcon from "~/assets/icons/github-icon.vue";
+import LinkedinIcon from "~/assets/icons/linkedin-icon.vue";
+import MailIcon from "~/assets/icons/mail-icon.vue";
 
 export const introText = `I'm a software engineer with over 5 years of experience working across
           the full-stack, from frontend frameworks like React and Vue to
@@ -29,9 +32,10 @@ export const introTextAll = `I'm a software engineer with over 5 years of experi
           of open-source projects.`;
 
 
-
 export const contactText = `I’m interested in freelance opportunities. However, if you have other requests or a question, don’t hesitate to contact me`
 
+export const contactTextAll = `I'm currently open to freelance opportunities and always eager to take on new and exciting projects. If you're looking for someone reliable and passionate to collaborate with, I'd love to hear more about what you have in mind. That said, even if you're not reaching out about a freelance role, feel free to contact me with any inquiries, ideas, or questions you may have. I'm happy to connect, offer insights, or simply chat about potential opportunities. Don't hesitate to get in touch — I'm always open to meaningful conversations and professional connections.
+`
 
 
 
@@ -329,4 +333,27 @@ export const factsAboutMe: IFacts[] = [
         text: `I can't live without comedy`,
         highlightedParts: ["comedy"],
     }
+]
+
+
+export const allSocials: ISocials[] = [
+    {
+        name: "Github",
+        link: "https://github.com/ali559",
+        icon: GithubIcon,
+        username: "ali559"
+    },
+    {
+
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/ali-barznji-36b664325/",
+        icon: LinkedinIcon,
+        username: "ali-barznji"
+    },
+    {
+        name: "Email",
+        link: "mailto:biz@alibarznji.dev",
+        icon: MailIcon,
+        username: "biz@alibarznji.dev"
+    },
 ]
