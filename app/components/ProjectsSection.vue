@@ -11,19 +11,17 @@
     <Transition :duration="500" name="fade" class=".fade">
       <div
         v-if="preview && previewImage"
-        class="fixed top-0 bottom-0 inset-0 z-50 backdrop-blur-2xl"
+        class="fixed inset-0 z-50 backdrop-blur-2xl"
         @click="preview = false"
       >
         <div class="relative">
-          <div
-            class="overflow-y-auto h-[100vh] w-[90%] mx-auto relative no-scrollbar"
+          <button
+            class="absolute top-4 right-4 cursor-pointer p-2"
+            @click="preview = false"
           >
-            <button
-              class="absolute top-4 right-4 cursor-pointer p-2"
-              @click="preview = false"
-            >
-              <XIcon />
-            </button>
+            <XIcon />
+          </button>
+          <div class="overflow-y-auto h-[100vh] w-[90%] mx-auto">
             <img
               :src="previewImage"
               alt="Preview Image"
