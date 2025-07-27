@@ -1,6 +1,9 @@
 <template>
   <div>
+    <SplashScreen v-if="showSplash" />
+
     <div
+      v-else
       class="transition-transform duration-300 ease-in-out"
       :class="isMenuOpen ? 'translate-x-full' : 'translate-x-0'"
     >
@@ -12,6 +15,7 @@
       <slot />
       <FooterLayout />
     </div>
+    <LinksString v-if="!showSplash" />
 
     <!-- Mobile Menu -->
     <div
@@ -68,6 +72,7 @@ import XIcon from "~/assets/icons/X-icon.vue";
 import LogoFilledIcon from "~/assets/icons/logo-filled-icon.vue";
 import FooterLayout from "./Footer.vue";
 import { links } from "~/data";
+import LinksString from "~/components/LinksString.vue";
 const HeaderLayout = defineAsyncComponent(() => import("~/layouts/Header.vue"));
 
 const socialLinks = [
@@ -87,7 +92,13 @@ const socialLinks = [
     path: "mailto:biz@alibarznji.dev",
   },
 ];
+const showSplash = ref<boolean>(true);
 
+onMounted(() => {
+  setTimeout(() => {
+    showSplash.value = false;
+  }, 5000); // 6 seconds
+});
 
 const isMenuOpen = ref<boolean>(false);
 
