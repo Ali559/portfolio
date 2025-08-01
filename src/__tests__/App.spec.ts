@@ -24,16 +24,18 @@ describe('App', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  it('handles dark/light mode', async () => {
+  it('handles dark/light and the mode persits in localStorage mode', async () => {
     const header = wrapper.findComponent(HeaderLayout)
     header.vm.$emit('set-theme', true)
     await flushPromises()
 
     expect(document.documentElement.classList.contains('dark')).toBe(true)
+    expect(localStorage.getItem('isDark')).toBe('true')
     header.vm.$emit('set-theme', false)
     await flushPromises()
 
     expect(document.documentElement.classList.contains('dark')).toBe(false)
+    expect(localStorage.getItem('isDark')).toBe('false')
   })
 
 
