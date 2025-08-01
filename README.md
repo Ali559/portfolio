@@ -1,75 +1,102 @@
-# Nuxt Minimal Starter
+# 💼 Full-Stack Developer Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to my personal portfolio website! This project showcases my work as a full-stack web developer, featuring selected projects, my tech stack, resume, and ways to connect with me.
 
-## Setup
+## 🌐 Live Demo
 
-Make sure to install dependencies:
+[View Portfolio Website](https://alibarznji.dev)
+
+## 🚀 Tech Stack
+
+**Frontend:**
+
+* Vue  
+* Tailwindcss, Shadcn UI
+* Vite
+* TypeScript / JavaScript
+
+**Other Tools & Platforms:**
+
+* Git & GitHub
+* Vercel
+* CI/CD
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── utils/
+├── .env
+├── package.json
+└── README.md
+```
+
+## 📸 Features
+
+* ✨ Clean, modern responsive design
+* 💻 Projects with live links and GitHub repos
+* 📄 Resume download or view
+* 🌙 Dark mode
+* ⚡ Fast performance and SEO optimized
+
+## 🛠️ Getting Started
+
+### Clone the Repository
 
 ```bash
-# npm
+git clone https://github.com/ali559/portfolio.git
+cd portfolio
+```
+
+### Install Dependencies
+
+```bash
 npm install
-
-# pnpm
+# or
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### Run the Development Server
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+### Build for Production
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+## 🔒 Environment Variables
 
-```bash
-# npm
-npm run preview
+If your project uses a backend or third-party services (e.g., email API), create a `.env` file:
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```env
+VITE_API_URL=https://alibarznji.dev
+EMAIL_SERVICE_KEY=your-key-here
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 🧩 Deployment
+
+This project can be deployed to:
+
+* **Vercel**: `vercel --prod`
+* **Netlify**: connect Git repo and deploy
+* **Render / AWS / Custom VPS**
+
+## 📬 Contact
+
+Feel free to reach out via:
+
+* [LinkedIn](linkedin.com/in/ali-barznji-36b664325)
+* [Email](mailto:biz@alibarznji.dev)
+
+## 📄 License
+
+This project is open-source under the [MIT License](LICENSE).
