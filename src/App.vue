@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeMount, onMounted, ref, watch } from 'vue'
+import { onBeforeMount, ref, watch } from 'vue'
 import HeaderLayout from './layouts/HeaderLayout.vue'
 import FooterLayout from './layouts/FooterLayout.vue'
 import { scrollToSection } from './lib/utils'
