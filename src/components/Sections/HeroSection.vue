@@ -4,6 +4,7 @@ import AvatarFallback from '../ui/avatar/AvatarFallback.vue'
 import AvatarImage from '../ui/avatar/AvatarImage.vue'
 import Button from '../ui/button/Button.vue'
 import Avatar from '../ui/avatar/Avatar.vue'
+import avatarImage from '../../assets/img/avatar.jpg'
 import { introText } from '@/data'
 const emit = defineEmits<{
   (e: 'scroll-to-section', sectionId: string): void
@@ -21,7 +22,7 @@ const emit = defineEmits<{
         :enter="{ opacity: 1, y: 0, animation: 'ease-in-out', animationDuration: '500ms' }"
       >
         <Avatar class="w-32 h-32 mx-auto mb-8">
-          <AvatarImage src="/src/assets/img/avatar.jpg" class="object-cover" />
+          <AvatarImage :src="avatarImage" class="object-cover" />
           <AvatarFallback>AB</AvatarFallback>
         </Avatar>
 

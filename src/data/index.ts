@@ -1,6 +1,11 @@
 import type { IAchievement, IExperience, INavLink, IProject, ISkill, ISocials } from "@/types";
-
-
+import portfolioImage from '../assets/img/projects/portfolio.png';
+import inzpiriImage from '../assets/img/projects/inzpiri.png';
+import wizrxImage from '../assets/img/projects/wizrx.png';
+import cdnCheckerImage from '../assets/img/projects/cdn-checker.png';
+import smartPricerImage from '../assets/img/projects/smart-pricer.png';
+import seeyouImage from '../assets/img/projects/seeyou.png';
+import envImage from '../assets/img/projects/env.png';
 
 export const projects: IProject[] = [
   {
@@ -19,7 +24,7 @@ export const projects: IProject[] = [
     ],
     github: 'https://github.com/Ali559/portfolio',
     live: 'https://alibarznji.dev',
-    image: '/src/assets/img/projects/portfolio.png'
+    image: portfolioImage
   },
   {
     title: 'Inzpiri (In progress)',
@@ -39,7 +44,7 @@ export const projects: IProject[] = [
       "Typescript",
     ],
     live: 'https://beta.inzpiri.com',
-    image: 'src/assets/img/projects/inzpiri.png'
+    image: inzpiriImage
   },
   {
     title: 'WiZRX',
@@ -59,7 +64,7 @@ export const projects: IProject[] = [
       "Typescript",
     ],
     live: 'https://masterwizr.com/wizr-x/',
-    image: 'src/assets/img/projects/wizrx.png'
+    image: wizrxImage
   },
   {
     title: 'Smart Pricer',
@@ -77,7 +82,7 @@ export const projects: IProject[] = [
       "Swagger",
     ],
     live: 'https://www.smart-pricer.com/',
-    image: 'src/assets/img/projects/smart-pricer.png'
+    image: smartPricerImage
   },
   {
     title: 'SEEYOU',
@@ -95,7 +100,7 @@ export const projects: IProject[] = [
       "Swagger",
     ],
     live: 'https://seeyou.eu', // Backend service
-    image: 'src/assets/img/projects/seeyou.png'
+    image: seeyouImage
   },
   {
     title: 'Strongly typed Env',
@@ -111,7 +116,7 @@ export const projects: IProject[] = [
       'Github',
     ],
     live: 'https://www.npmjs.com/package/strongly-typed-env',
-    image: '/src/assets/img/projects/env.png'
+    image: envImage
 
   },
   {
@@ -126,7 +131,7 @@ export const projects: IProject[] = [
       'Github',
     ],
     live: 'https://marketplace.visualstudio.com/items?itemName=AliBarznji.cdn-checker',
-    image: 'src/assets/img/projects/cdn-checker.png'
+    image: cdnCheckerImage
   },
   {
     title: 'SEEYOU Chat',
