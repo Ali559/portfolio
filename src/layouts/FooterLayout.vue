@@ -11,7 +11,7 @@ import { Code2, Github, Linkedin, Mail } from 'lucide-vue-next'
       <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
         <div class="flex items-center space-x-2">
           <Code2 class="h-6 w-6 text-primary" />
-          <span>© 2024 Ali Barznji. All rights reserved.</span>
+          <span>© 2025 Ali Barznji. All rights reserved.</span>
         </div>
         <div class="flex space-x-4">
           <Button variant="ghost" size="icon" asChild>

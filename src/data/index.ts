@@ -193,43 +193,37 @@ export const projects: IProject[] = [
 
 export const experience: IExperience[] = [
   {
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Innovations Inc.',
-    period: '2022 - Present',
-    description: 'Led development of scalable web applications, mentored junior developers, and implemented CI/CD pipelines.',
+    title: 'Software Engineer',
+    company: 'Learnio AS',
+    period: 'March 2023 - Present',
+    description: 'Promoted to Team Lead within 8 months for exceptional technical and leadership skills. Lead cross-functional projects, ensuring timely, high-quality delivery. Oversee frontend and backend development, collaborating with designers, developers, and stakeholders. Build intuitive UIs using React.js, Vue.js, JavaScript, HTML, and CSS. Develop scalable systems with Node.js, Go, REST APIs, and microservices. Maintain code quality, Git versioning, and CI best practices.',
   },
   {
-    title: 'Full Stack Developer',
-    company: 'StartupXYZ',
-    period: '2020 - 2022',
-    description: 'Built and maintained multiple client projects, collaborated with design team, and optimized application performance.',
-  },
-  {
-    title: 'Frontend Developer',
-    company: 'Digital Agency',
-    period: '2019 - 2020',
-    description: 'Developed responsive websites and web applications, worked with modern JavaScript frameworks.',
+    title: 'Software Engineer',
+    company: 'Dev Centre House',
+    period: 'June 2021 - March 2023',
+    description: 'Developed and maintained the backend of the SEEYOU chat platform using RabbitMQ, Redis, and scalable messaging architecture. Built Slack and Telegram integration demos for real-time messaging. Led backend proxy development for Smart Pricer, enhancing API performance. Recognized twice as Employee of the Month and selected for DCH’s elite "Navy SEAL" team for top-tier performance, innovation, and work ethic. Integrated real-time communication with Node.js and third-party APIs.',
   },
 ];
 
 export const achievements: IAchievement[] = [
   {
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    year: '2023',
-    description: 'Professional certification in designing and deploying scalable systems on AWS.'
+    title: 'Critical Thinking and Creative Problem Solving',
+    issuer: 'Global Solutions',
+    year: '2019',
+    description: 'Recognized for exceptional critical thinking and creative problem-solving skills.'
   },
   {
-    title: 'React Advanced Certification',
-    issuer: 'Meta',
-    year: '2022',
-    description: 'Advanced certification covering React patterns, performance optimization, and testing.'
+    title: 'Adaptability',
+    issuer: 'Global Solutions',
+    year: '2019',
+    description: 'Recognized for exceptional adaptability and ability to learn quickly.'
   },
   {
-    title: 'Best Innovation Award',
-    issuer: 'Tech Innovations Inc.',
-    year: '2023',
-    description: 'Recognized for developing an innovative solution that increased system efficiency by 40%.'
+    title: 'Virtual Collaboration',
+    issuer: 'Global Solutions',
+    year: '2019',
+    description: 'Recognized for exceptional virtual collaboration skills.'
   },
 ];
 
