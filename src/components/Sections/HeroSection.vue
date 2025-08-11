@@ -5,7 +5,7 @@ import AvatarImage from '../ui/avatar/AvatarImage.vue'
 import Button from '../ui/button/Button.vue'
 import Avatar from '../ui/avatar/Avatar.vue'
 import avatarImage from '../../assets/img/avatar.jpg'
-import { introText } from '@/data'
+import { allSocials, introText } from '@/data'
 const emit = defineEmits<{
   (e: 'scroll-to-section', sectionId: string): void
 }>()
@@ -63,17 +63,17 @@ const emit = defineEmits<{
           :enter="{ opacity: 1, y: 0, animation: 'ease-in-out', animationDuration: '500ms' }"
         >
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a :href="allSocials.github.link" target="_blank" rel="noopener noreferrer">
               <Github class="h-6 w-6" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a :href="allSocials.linkedin.link" target="_blank" rel="noopener noreferrer">
               <Linkedin class="h-6 w-6" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="mailto:alex@example.com">
+            <a :href="'mailto:' + allSocials.email.link">
               <Mail class="h-6 w-6" />
             </a>
           </Button>
