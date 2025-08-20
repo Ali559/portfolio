@@ -1,3 +1,5 @@
+import type { Component } from "vue"
+
 export interface IProject {
   title: string
   description: string
@@ -11,7 +13,7 @@ export interface IProject {
 export interface ISkill {
   name: string
   level: number
-  category: 'Languages' |'Tools' | 'Frameworks' | 'Databases' | 'Other';
+  category: 'Languages' | 'Tools' | 'Frameworks' | 'Databases' | 'Other';
 }
 
 export interface IExperience {
@@ -40,3 +42,15 @@ export interface ISocials {
 }
 
 
+
+export interface IFunFact {
+  icon: Component,
+  title: string
+  description: string
+  color: string
+}
+export interface IStat {
+  number: string,
+  label: string
+  icon: Component,
+}

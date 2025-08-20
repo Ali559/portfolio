@@ -7,6 +7,7 @@ import AboutSection from '@/components/Sections/AboutSection.vue';
 import ProjectSection from '@/components/Sections/ProjectSection.vue';
 import ExperienceSection from '@/components/Sections/ExperienceSection.vue';
 import AchievementSection from '@/components/Sections/AchievementSection.vue';
+import FunFactsSection from '@/components/Sections/FunFactsSection.vue';
 describe('Home Page', () => {
   let wrapper: ReturnType<typeof mount>;
   beforeEach(async () => {
@@ -17,7 +18,8 @@ describe('Home Page', () => {
           AboutSection,
           ProjectSection,
           ExperienceSection,
-          AchievementSection
+          AchievementSection,
+          FunFactsSection
         }
       }
     })
@@ -32,5 +34,6 @@ describe('Home Page', () => {
     expect(wrapper.findComponent(ProjectSection).exists()).toBe(true)
     expect(wrapper.findComponent(ExperienceSection).exists()).toBe(true)
     expect(wrapper.findComponent(AchievementSection).exists()).toBe(true)
+    expect(wrapper.findComponent(FunFactsSection).exists()).toBe(true)
   })
 })

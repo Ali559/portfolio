@@ -1,4 +1,4 @@
-import type { IAchievement, IExperience, INavLink, IProject, ISkill, ISocials } from "@/types";
+import type { IAchievement, IExperience, IFunFact, INavLink, IProject, ISkill, ISocials, IStat } from "@/types";
 import portfolioImage from '../assets/img/projects/portfolio.png';
 import inzpiriImage from '../assets/img/projects/inzpiri.png';
 import wizrxImage from '../assets/img/projects/wizrx.png';
@@ -6,6 +6,7 @@ import cdnCheckerImage from '../assets/img/projects/cdn-checker.png';
 import smartPricerImage from '../assets/img/projects/smart-pricer.png';
 import seeyouImage from '../assets/img/projects/seeyou.png';
 import envImage from '../assets/img/projects/env.png';
+import { BookOpen, Gamepad, Music, Plane, Crown, Users, Film, Shuffle, Code2, Briefcase, Award } from "lucide-vue-next";
 
 export const projects: IProject[] = [
   {
@@ -396,3 +397,65 @@ export const allSocials: Record<'github' | 'linkedin' | 'email', ISocials> = {
   },
 
 }
+
+
+
+
+export const funFacts: IFunFact[] = [
+  {
+    icon: Crown,
+    title: 'Early Leader',
+    description: 'Became a team leader at 22, guiding projects and people before most even finished grad school.',
+    color: 'from-yellow-500/20 to-amber-500/20'
+  },
+  {
+    icon: Music,
+    title: 'Classical Soul',
+    description: 'Deeply moved by classical music—especially Chopin’s nocturnes, which never fail to inspire focus and calm.',
+    color: 'from-purple-500/20 to-pink-500/20'
+  },
+  {
+    icon: Plane,
+    title: 'Frequent Explorer',
+    description: 'Travels at least once every year to experience new cultures, cuisines, and perspectives.',
+    color: 'from-blue-500/20 to-cyan-500/20'
+  },
+  {
+    icon: Users,
+    title: 'Global Circle',
+    description: 'Has friends scattered across many countries, making every trip feel like visiting family.',
+    color: 'from-green-500/20 to-emerald-500/20'
+  },
+  {
+    icon: Film,
+    title: 'Rare Moviegoer',
+    description: 'Has only been to the cinema once—a quirky fun fact that surprises most people.',
+    color: 'from-red-500/20 to-rose-500/20'
+  },
+  {
+    icon: BookOpen,
+    title: 'Literary Thinker',
+    description: 'Avid reader of philosophy and literature, with Dostoevsky being a constant source of reflection.',
+    color: 'from-indigo-500/20 to-blue-500/20'
+  },
+  {
+    icon: Gamepad,
+    title: 'Story-Driven Gamer',
+    description: 'Prefers games with rich narratives that feel like interactive novels rather than just challenges.',
+    color: 'from-purple-500/20 to-violet-500/20'
+  },
+  {
+    icon: Shuffle,
+    title: 'Project Juggler',
+    description: 'Comfortably works across multiple projects without being tied to a single tech stack.',
+    color: 'from-teal-500/20 to-green-500/20'
+  },
+];
+
+
+export const stats: IStat[] = [
+  { number: '5+', label: 'Years Coding', icon: Code2 },
+  { number: '15+', label: 'Projects Built', icon: Briefcase },
+  { number: '4', label: 'Teams Led', icon: Users },
+  { number: '5–10', label: 'Honors Received', icon: Award },
+];

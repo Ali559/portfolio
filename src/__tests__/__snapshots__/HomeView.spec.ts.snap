@@ -8,14 +8,14 @@ exports[`Home Page > mounts renders properly 1`] = `
       <h1 class="text-4xl sm:text-6xl lg:text-7xl mb-6" initial="[object Object]" enter="[object Object]"> Full Stack Developer </h1>
       <p class="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto" initial="[object Object]" enter="[object Object]">I craft beautiful, scalable web applications with modern technologies and best practices</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" initial="[object Object]" enter="[object Object]"><button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 has-[>svg]:px-4"> View My Work </button><button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[>svg]:px-4"> Get In Touch </button></div>
-      <div class="flex justify-center space-x-6 mt-8" initial="[object Object]" enter="[object Object]"><a data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9" href="https://github.com" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github h-6 w-6">
+      <div class="flex justify-center space-x-6 mt-8" initial="[object Object]" enter="[object Object]"><a data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9" href="github.com/ali559" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github h-6 w-6">
             <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
             <path d="M9 18c-4.51 2-5-2-7-2"></path>
-          </svg></a><a data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9" href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin h-6 w-6">
+          </svg></a><a data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9" href="linkedin.com/in/ali-barznji-36b664325" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin h-6 w-6">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
             <rect width="4" height="12" x="2" y="9"></rect>
             <circle cx="4" cy="4" r="2"></circle>
-          </svg></a><a data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9" href="mailto:alex@example.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail h-6 w-6">
+          </svg></a><a data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9" href="mailto:biz@alibarznji.dev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail h-6 w-6">
             <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
           </svg></a></div>
@@ -118,6 +118,214 @@ exports[`Home Page > mounts renders properly 1`] = `
           <div data-slot="card-content" class="px-6">
             <p class="text-muted-foreground"> Designing efficient database schemas and optimizing queries for both SQL and NoSQL databases. </p>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fun Facts Section -->
+<section id="fun-facts" class="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+  <div class="max-w-6xl mx-auto">
+    <div initial="[object Object]" enter="[object Object]" class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl mb-4">Fun Facts About Me</h2>
+      <p class="text-xl text-muted-foreground max-w-3xl mx-auto"> Beyond coding, here are some interesting things that make me who I am </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div enter="[object Object]" class="h-full hover:scale-105 transition-transform duration-500">
+        <div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm from-yellow-500/20 to-amber-500/20 h-full overflow-hidden group relative bg-gradient-to-br border-border/50 hover:border-primary/30 transition-all duration-300">
+          <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-3">
+            <div class="flex items-center justify-between mb-3">
+              <div class="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crown-icon lucide-crown h-6 w-6 text-primary">
+                  <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"></path>
+                  <path d="M5 21h14"></path>
+                </svg></div>
+              <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
+            </div>
+            <h3 data-slot="card-title" class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">Early Leader</h3>
+          </div>
+          <div data-slot="card-content" class="px-6">
+            <p class="text-muted-foreground text-sm leading-relaxed">Became a team leader at 22, guiding projects and people before most even finished grad school.</p>
+          </div><!-- {/* Animated background effect */} -->
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      </div>
+      <div enter="[object Object]" class="h-full hover:scale-105 transition-transform duration-500">
+        <div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm from-purple-500/20 to-pink-500/20 h-full overflow-hidden group relative bg-gradient-to-br border-border/50 hover:border-primary/30 transition-all duration-300">
+          <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-3">
+            <div class="flex items-center justify-between mb-3">
+              <div class="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music-icon lucide-music h-6 w-6 text-primary">
+                  <path d="M9 18V5l12-2v13"></path>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <circle cx="18" cy="16" r="3"></circle>
+                </svg></div>
+              <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
+            </div>
+            <h3 data-slot="card-title" class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">Classical Soul</h3>
+          </div>
+          <div data-slot="card-content" class="px-6">
+            <p class="text-muted-foreground text-sm leading-relaxed">Deeply moved by classical music—especially Chopin’s nocturnes, which never fail to inspire focus and calm.</p>
+          </div><!-- {/* Animated background effect */} -->
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      </div>
+      <div enter="[object Object]" class="h-full hover:scale-105 transition-transform duration-500">
+        <div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm from-blue-500/20 to-cyan-500/20 h-full overflow-hidden group relative bg-gradient-to-br border-border/50 hover:border-primary/30 transition-all duration-300">
+          <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-3">
+            <div class="flex items-center justify-between mb-3">
+              <div class="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-icon lucide-plane h-6 w-6 text-primary">
+                  <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+                </svg></div>
+              <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
+            </div>
+            <h3 data-slot="card-title" class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">Frequent Explorer</h3>
+          </div>
+          <div data-slot="card-content" class="px-6">
+            <p class="text-muted-foreground text-sm leading-relaxed">Travels at least once every year to experience new cultures, cuisines, and perspectives.</p>
+          </div><!-- {/* Animated background effect */} -->
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      </div>
+      <div enter="[object Object]" class="h-full hover:scale-105 transition-transform duration-500">
+        <div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm from-green-500/20 to-emerald-500/20 h-full overflow-hidden group relative bg-gradient-to-br border-border/50 hover:border-primary/30 transition-all duration-300">
+          <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-3">
+            <div class="flex items-center justify-between mb-3">
+              <div class="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users h-6 w-6 text-primary">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg></div>
+              <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
+            </div>
+            <h3 data-slot="card-title" class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">Global Circle</h3>
+          </div>
+          <div data-slot="card-content" class="px-6">
+            <p class="text-muted-foreground text-sm leading-relaxed">Has friends scattered across many countries, making every trip feel like visiting family.</p>
+          </div><!-- {/* Animated background effect */} -->
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      </div>
+      <div enter="[object Object]" class="h-full hover:scale-105 transition-transform duration-500">
+        <div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm from-red-500/20 to-rose-500/20 h-full overflow-hidden group relative bg-gradient-to-br border-border/50 hover:border-primary/30 transition-all duration-300">
+          <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-3">
+            <div class="flex items-center justify-between mb-3">
+              <div class="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film-icon lucide-film h-6 w-6 text-primary">
+                  <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                  <path d="M7 3v18"></path>
+                  <path d="M3 7.5h4"></path>
+                  <path d="M3 12h18"></path>
+                  <path d="M3 16.5h4"></path>
+                  <path d="M17 3v18"></path>
+                  <path d="M17 7.5h4"></path>
+                  <path d="M17 16.5h4"></path>
+                </svg></div>
+              <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
+            </div>
+            <h3 data-slot="card-title" class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">Rare Moviegoer</h3>
+          </div>
+          <div data-slot="card-content" class="px-6">
+            <p class="text-muted-foreground text-sm leading-relaxed">Has only been to the cinema once—a quirky fun fact that surprises most people.</p>
+          </div><!-- {/* Animated background effect */} -->
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      </div>
+      <div enter="[object Object]" class="h-full hover:scale-105 transition-transform duration-500">
+        <div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm from-indigo-500/20 to-blue-500/20 h-full overflow-hidden group relative bg-gradient-to-br border-border/50 hover:border-primary/30 transition-all duration-300">
+          <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-3">
+            <div class="flex items-center justify-between mb-3">
+              <div class="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-icon lucide-book-open h-6 w-6 text-primary">
+                  <path d="M12 7v14"></path>
+                  <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+                </svg></div>
+              <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
+            </div>
+            <h3 data-slot="card-title" class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">Literary Thinker</h3>
+          </div>
+          <div data-slot="card-content" class="px-6">
+            <p class="text-muted-foreground text-sm leading-relaxed">Avid reader of philosophy and literature, with Dostoevsky being a constant source of reflection.</p>
+          </div><!-- {/* Animated background effect */} -->
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      </div>
+      <div enter="[object Object]" class="h-full hover:scale-105 transition-transform duration-500">
+        <div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm from-purple-500/20 to-violet-500/20 h-full overflow-hidden group relative bg-gradient-to-br border-border/50 hover:border-primary/30 transition-all duration-300">
+          <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-3">
+            <div class="flex items-center justify-between mb-3">
+              <div class="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-icon lucide-gamepad h-6 w-6 text-primary">
+                  <line x1="6" x2="10" y1="12" y2="12"></line>
+                  <line x1="8" x2="8" y1="10" y2="14"></line>
+                  <line x1="15" x2="15.01" y1="13" y2="13"></line>
+                  <line x1="18" x2="18.01" y1="11" y2="11"></line>
+                  <rect width="20" height="12" x="2" y="6" rx="2"></rect>
+                </svg></div>
+              <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
+            </div>
+            <h3 data-slot="card-title" class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">Story-Driven Gamer</h3>
+          </div>
+          <div data-slot="card-content" class="px-6">
+            <p class="text-muted-foreground text-sm leading-relaxed">Prefers games with rich narratives that feel like interactive novels rather than just challenges.</p>
+          </div><!-- {/* Animated background effect */} -->
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      </div>
+      <div enter="[object Object]" class="h-full hover:scale-105 transition-transform duration-500">
+        <div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm from-teal-500/20 to-green-500/20 h-full overflow-hidden group relative bg-gradient-to-br border-border/50 hover:border-primary/30 transition-all duration-300">
+          <div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 pb-3">
+            <div class="flex items-center justify-between mb-3">
+              <div class="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shuffle-icon lucide-shuffle h-6 w-6 text-primary">
+                  <path d="m18 14 4 4-4 4"></path>
+                  <path d="m18 2 4 4-4 4"></path>
+                  <path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22"></path>
+                  <path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"></path>
+                  <path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"></path>
+                </svg></div>
+              <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
+            </div>
+            <h3 data-slot="card-title" class="font-semibold text-lg group-hover:text-primary transition-colors duration-300">Project Juggler</h3>
+          </div>
+          <div data-slot="card-content" class="px-6">
+            <p class="text-muted-foreground text-sm leading-relaxed">Comfortably works across multiple projects without being tied to a single tech stack.</p>
+          </div><!-- {/* Animated background effect */} -->
+          <div class="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        </div>
+      </div>
+    </div><!-- Additional Stats Section  -->
+    <div initial="[object Object]" enter="[object Object]" class="mt-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div initial="[object Object]" enter="[object Object]" class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml h-8 w-8 text-primary">
+              <path d="m18 16 4-4-4-4"></path>
+              <path d="m6 8-4 4 4 4"></path>
+              <path d="m14.5 4-5 16"></path>
+            </svg></div>
+          <div class="text-3xl font-medium text-primary mb-2">5+</div>
+          <div class="text-muted-foreground">Years Coding</div>
+        </div>
+        <div initial="[object Object]" enter="[object Object]" class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-icon lucide-briefcase h-8 w-8 text-primary">
+              <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+            </svg></div>
+          <div class="text-3xl font-medium text-primary mb-2">15+</div>
+          <div class="text-muted-foreground">Projects Built</div>
+        </div>
+        <div initial="[object Object]" enter="[object Object]" class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users h-8 w-8 text-primary">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+            </svg></div>
+          <div class="text-3xl font-medium text-primary mb-2">4</div>
+          <div class="text-muted-foreground">Teams Led</div>
+        </div>
+        <div initial="[object Object]" enter="[object Object]" class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award-icon lucide-award h-8 w-8 text-primary">
+              <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+              <circle cx="12" cy="8" r="6"></circle>
+            </svg></div>
+          <div class="text-3xl font-medium text-primary mb-2">5–10</div>
+          <div class="text-muted-foreground">Honors Received</div>
         </div>
       </div>
     </div>
