@@ -63,12 +63,12 @@ const emit = defineEmits<{
           :enter="{ opacity: 1, y: 0, animation: 'ease-in-out', animationDuration: '500ms' }"
         >
           <Button variant="ghost" size="icon" asChild>
-            <a :href="allSocials.github.link" target="_blank" rel="noopener noreferrer">
+            <a :href="'https://'+ allSocials.github.link" target="_blank" rel="noopener noreferrer">
               <Github class="h-6 w-6" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a :href="allSocials.linkedin.link" target="_blank" rel="noopener noreferrer">
+            <a :href="'https://'+ allSocials.linkedin.link" target="_blank" rel="noopener noreferrer">
               <Linkedin class="h-6 w-6" />
             </a>
           </Button>
