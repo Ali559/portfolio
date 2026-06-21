@@ -1,18 +1,19 @@
-// @ts-check
-import withNuxt from "./.nuxt/eslint.config.mjs";
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import { FlatCompat } from '@eslint/eslintrc'
 
-export default withNuxt(
-  // Your custom configs here
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+})
+
+const eslintConfig = [
   {
-    rules: {
-      // Your custom rules here
-      "no-console": "error",
-      "no-debugger": "error",
-      "no-unused-vars": "error",
-      "vue/no-unused-properties": "error",
-      "vue/no-unused-components": "error",
-      "vue/no-unused-vars": "error",
-      "vue/html-self-closing": "off",
-    },
+    ignores: ['.next/**', 'node_modules/**', 'out/**', 'next-env.d.ts'],
   },
-);
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+]
+
+export default eslintConfig

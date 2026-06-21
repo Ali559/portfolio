@@ -1,4 +1,4 @@
-import type { Component } from "vue"
+import type { LucideIcon } from 'lucide-react'
 
 export interface IProject {
   title: string
@@ -9,11 +9,10 @@ export interface IProject {
   image?: string
 }
 
-
 export interface ISkill {
   name: string
   level: number
-  category: 'Languages' | 'Tools' | 'Frameworks' | 'Databases' | 'Other';
+  category: 'Languages' | 'Tools' | 'Frameworks' | 'Databases' | 'Other'
 }
 
 export interface IExperience {
@@ -35,22 +34,20 @@ export interface INavLink {
   href: string
 }
 
-
 export interface ISocials {
   name: string
   link: string
 }
 
-
-
 export interface IFunFact {
-  icon: Component,
+  icon: LucideIcon
   title: string
   description: string
   color: string
 }
+
 export interface IStat {
-  number: string,
+  number: string
   label: string
-  icon: Component,
+  icon: LucideIcon
 }
