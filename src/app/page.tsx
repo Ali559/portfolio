@@ -1,9 +1,9 @@
-import { AboutSection } from '@/components/sections/AboutSection'
-import { AchievementSection } from '@/components/sections/AchievementSection'
-import { ExperienceSection } from '@/components/sections/ExperienceSection'
-import { FunFactsSection } from '@/components/sections/FunFactsSection'
-import { HeroSection } from '@/components/sections/HeroSection'
-import { ProjectSection } from '@/components/sections/ProjectSection'
+import { AboutSection } from '@/components/Sections/AboutSection'
+import { AchievementSection } from '@/components/Sections/AchievementSection'
+import { ExperienceSection } from '@/components/Sections/ExperienceSection'
+import { FunFactsSection } from '@/components/Sections/FunFactsSection'
+import { HeroSection } from '@/components/Sections/HeroSection'
+import { ProjectSection } from '@/components/Sections/ProjectSection'
 
 export default function Home() {
   return (
