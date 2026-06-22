@@ -6,7 +6,7 @@ import { allSocials } from '@/data'
 const siteUrl = 'https://alibarznji.dev'
 const title = 'Ali Barznji — Full Stack Developer'
 const description =
-  'Portfolio of Ali Barznji, a full stack developer with 5+ years of experience building scalable web applications with React, Vue, Node.js, Go, and .NET.'
+  'Portfolio of Ali Barznji, a full stack developer with 5+ years of experience building scalable web applications with React, Vue, Node.js, Go, and .NET'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
