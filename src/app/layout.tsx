@@ -2,11 +2,12 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { SiteShell } from '@/components/layout/SiteShell'
 import { allSocials } from '@/data'
+import { poppins } from '@/lib/fonts'
+import { siteUrl } from '@/lib/site'
 
-const siteUrl = 'https://alibarznji.dev'
-const title = 'Ali Barznji — Full Stack Developer'
+const title = 'Ali Barznji — Software Engineer'
 const description =
-  'Portfolio of Ali Barznji, a full stack developer with 5+ years of experience building scalable web applications with React, Vue, Node.js, Go, and .NET'
+  'Portfolio of Ali Barznji, a full stack developer with 7 years of experience building scalable web applications with React, Vue, Node.js, Go, and .NET'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -103,7 +104,7 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
         <script
           type="application/ld+json"

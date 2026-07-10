@@ -24,6 +24,26 @@ import {
 
 export const projects: IProject[] = [
   {
+    title: 'Zankoline',
+    description:
+      'Zankoline is a university admission guide that helps students in Kurdistan find eligible university programs based on their grade, build a shortlist of choices',
+    technologies: [
+      'React',
+      'Tailwindcss',
+      'Shadcn UI',
+      'Github',
+      'Git',
+      'Figma',
+      'Typescript',
+      'Vercel',
+      'PWA',
+      'DexieDb',
+    ],
+    github: 'https://github.com/Ali559/zankoline-pwa',
+    live: '/devlog/zankoline',
+    image: '/img/projects/zankoline.png',
+  },
+  {
     title: 'Portfolio Website',
     description: 'My Personal Portfolio',
     technologies: [
