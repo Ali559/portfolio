@@ -32,6 +32,7 @@ export interface IAchievement {
 export interface INavLink {
   name: string
   href: string
+  link?: boolean
 }
 
 export interface ISocials {

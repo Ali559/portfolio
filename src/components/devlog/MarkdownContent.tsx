@@ -22,6 +22,12 @@ const prettyCodeOptions: PrettyCodeOptions = {
   theme: { light: 'github-light', dark: 'github-dark' },
   keepBackground: true,
   defaultLang: { block: 'plaintext', inline: 'plaintext' },
+  // Inline `code` spans (single backticks, no fence) should stay plain
+  // inline text styled by the `.prose code` pill rule below — not get
+  // wrapped in a Shiki span, which otherwise carries the same
+  // `data-rehype-pretty-code-figure` attribute as block code fences and
+  // ends up forced onto its own line by the block code-block styles.
+  bypassInlineCode: true,
 }
 
 const autolinkOptions: AutolinkOptions = {

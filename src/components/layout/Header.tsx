@@ -5,6 +5,7 @@ import { Code2, Menu, Moon, Sun, X } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { navLinks } from '@/data'
+import Link from 'next/link'
 
 interface HeaderProps {
   isDark: boolean
@@ -39,19 +40,33 @@ export function Header({
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                className={`capitalize hover:text-primary transition-colors ${
-                  activeSection.toLowerCase() === link.name.toLowerCase()
-                    ? 'text-primary'
-                    : 'text-muted-foreground'
-                }`}
-                onClick={() => onScrollToSection(link.name.toLowerCase())}
-              >
-                {link.name}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              !link.link ? (
+                <button
+                  key={link.name}
+                  className={`capitalize hover:text-primary transition-colors ${
+                    activeSection.toLowerCase() === link.name.toLowerCase()
+                      ? 'text-primary'
+                      : 'text-muted-foreground'
+                  }`}
+                  onClick={() => onScrollToSection(link.name.toLowerCase())}
+                >
+                  {link.name}
+                </button>
+              ) : (
+                <Link
+                  className={`capitalize hover:text-primary transition-colors ${
+                    activeSection.toLowerCase() === link.name.toLowerCase()
+                      ? 'text-primary'
+                      : 'text-muted-foreground'
+                  }`}
+                  href={link.href}
+                  key={link.name}
+                >
+                  {link.name.toLowerCase()}
+                </Link>
+              ),
+            )}
             <Button
               variant="ghost"
               size="icon"

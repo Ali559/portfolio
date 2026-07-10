@@ -197,8 +197,12 @@
   font-weight: 500;
 }
 
-/* rehype-pretty-code figure/pre/code — unstyled by design, styled here. */
-[data-rehype-pretty-code-figure] {
+/* rehype-pretty-code figure/pre/code — unstyled by design, styled here.
+   Scoped to the `figure` tag specifically (not just the attribute) because
+   rehype-pretty-code also stamps inline code spans with the same
+   `data-rehype-pretty-code-figure` attribute on a `<span>` — these rules
+   must never apply to those, or inline code breaks onto its own line. */
+figure[data-rehype-pretty-code-figure] {
   margin: 1.75em 0;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
@@ -223,7 +227,7 @@
   font-style: italic;
 }
 
-[data-rehype-pretty-code-figure] pre {
+figure[data-rehype-pretty-code-figure] pre {
   margin: 0;
   padding: 1rem 0;
   overflow-x: auto;
@@ -232,23 +236,23 @@
   background-color: var(--shiki-light-bg);
 }
 
-.dark [data-rehype-pretty-code-figure] pre {
+.dark figure[data-rehype-pretty-code-figure] pre {
   background-color: var(--shiki-dark-bg);
 }
 
-[data-rehype-pretty-code-figure] code {
+figure[data-rehype-pretty-code-figure] code {
   display: grid;
   min-width: 100%;
   counter-reset: line;
 }
 
-[data-rehype-pretty-code-figure] code,
-[data-rehype-pretty-code-figure] code span {
+figure[data-rehype-pretty-code-figure] code,
+figure[data-rehype-pretty-code-figure] code span {
   color: var(--shiki-light);
 }
 
-.dark [data-rehype-pretty-code-figure] code,
-.dark [data-rehype-pretty-code-figure] code span {
+.dark figure[data-rehype-pretty-code-figure] code,
+.dark figure[data-rehype-pretty-code-figure] code span {
   color: var(--shiki-dark);
 }
 
@@ -262,17 +266,17 @@ code[data-line-numbers] > [data-line]::before {
   color: var(--color-muted-foreground);
 }
 
-[data-rehype-pretty-code-figure] [data-line] {
+figure[data-rehype-pretty-code-figure] [data-line] {
   padding: 0 1rem;
   border-left: 2px solid transparent;
 }
 
-[data-rehype-pretty-code-figure] [data-highlighted-line] {
+figure[data-rehype-pretty-code-figure] [data-highlighted-line] {
   background-color: var(--color-accent);
   border-left-color: var(--color-primary);
 }
 
-[data-rehype-pretty-code-figure] [data-highlighted-chars] {
+figure[data-rehype-pretty-code-figure] [data-highlighted-chars] {
   border-radius: 0.25rem;
   background-color: var(--color-accent);
   padding: 0.1em 0.2em;
@@ -313,7 +317,7 @@ code[data-line-numbers] > [data-line]::before {
   nav,
   aside,
   footer,
-  [data-rehype-pretty-code-figure] .code-lang-pill {
+  figure[data-rehype-pretty-code-figure] .code-lang-pill {
     display: none !important;
   }
 }

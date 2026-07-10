@@ -247,6 +247,7 @@ export const navLinks: INavLink[] = [
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Devlog', href: '/devlog', link: true },
 ]
 
 export const introText = `I craft beautiful, scalable web applications with modern technologies and best practices`
