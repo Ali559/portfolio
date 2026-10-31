@@ -19,9 +19,10 @@ export const bricolage = Bricolage_Grotesque({
   display: 'swap',
 })
 
+// Loaded as the variable font: one file covers every weight, instead of six
+// separate downloads at build time.
 export const notoArabic = Noto_Sans_Arabic({
   subsets: ['arabic'],
-  weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-arabic',
   display: 'swap',
 })
