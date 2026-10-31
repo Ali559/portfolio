@@ -3,6 +3,9 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 import type { DevlogEntry } from '@/lib/devlog'
 
+const card =
+  'group flex flex-col rounded-[1.5rem] p-6 transition-transform duration-300 hover:-translate-y-1'
+
 export function DevlogNav({
   previous,
   next,
@@ -13,19 +16,17 @@ export function DevlogNav({
   if (!previous && !next) return null
 
   return (
-    <nav aria-label="More devlog entries" className="mt-16 grid gap-4 border-t border-border pt-8 sm:grid-cols-2">
+    <nav aria-label="More devlog entries" className="mt-20 grid gap-4 sm:grid-cols-2">
       {previous ? (
-        <Link
-          href={`/devlog/${previous.slug}`}
-          className="group flex flex-col rounded-xl border border-border p-4 transition-colors hover:bg-secondary/40"
-        >
-          <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-            <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
+        <Link href={`/devlog/${previous.slug}`} className={`${card} bg-grape text-paper`}>
+          <span className="flex items-center gap-1.5 text-sm font-bold opacity-80">
+            <ArrowLeft
+              className="h-4 w-4 transition-transform group-hover:-translate-x-1"
+              aria-hidden
+            />
             Previous
           </span>
-          <span className="mt-1 font-medium transition-colors group-hover:text-primary">
-            {previous.frontmatter.title}
-          </span>
+          <span className="mt-2 text-xl font-extrabold">{previous.frontmatter.title}</span>
         </Link>
       ) : (
         <span />
@@ -34,15 +35,16 @@ export function DevlogNav({
       {next ? (
         <Link
           href={`/devlog/${next.slug}`}
-          className="group flex flex-col rounded-xl border border-border p-4 text-right transition-colors hover:bg-secondary/40 sm:items-end"
+          className={`${card} bg-jade text-end text-ink sm:items-end`}
         >
-          <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5 text-sm font-bold opacity-80">
             Next
-            <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+            <ArrowRight
+              className="h-4 w-4 transition-transform group-hover:translate-x-1"
+              aria-hidden
+            />
           </span>
-          <span className="mt-1 font-medium transition-colors group-hover:text-primary">
-            {next.frontmatter.title}
-          </span>
+          <span className="mt-2 text-xl font-extrabold">{next.frontmatter.title}</span>
         </Link>
       ) : (
         <span />

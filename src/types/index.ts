@@ -1,54 +1,5 @@
-import type { LucideIcon } from 'lucide-react'
-
-export interface IProject {
-  title: string
-  description: string
-  technologies: string[]
-  github?: string
-  live?: string
-  image?: string
-}
-
-export interface ISkill {
-  name: string
-  level: number
-  category: 'Languages' | 'Tools' | 'Frameworks' | 'Databases' | 'Other'
-}
-
-export interface IExperience {
-  title: string
-  company: string
-  description: string
-  period: string
-}
-
-export interface IAchievement {
-  title: string
-  issuer: string
-  year: string
-  description: string
-}
-
 export interface INavLink {
-  name: string
+  key: 'work' | 'experience' | 'contact' | 'devlog'
   href: string
   link?: boolean
-}
-
-export interface ISocials {
-  name: string
-  link: string
-}
-
-export interface IFunFact {
-  icon: LucideIcon
-  title: string
-  description: string
-  color: string
-}
-
-export interface IStat {
-  number: string
-  label: string
-  icon: LucideIcon
 }

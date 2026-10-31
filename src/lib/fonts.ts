@@ -1,34 +1,27 @@
-import localFont from 'next/font/local'
+import { Bricolage_Grotesque, Noto_Sans_Arabic } from 'next/font/google'
 
-// ─── Local Fonts ────────────────────────────────────────────────────────────
+// ─── Fonts ──────────────────────────────────────────────────────────────────
 //
-// Poppins is self-hosted from /public/fonts (no external network request,
-// no layout shift from a late-loading Google Fonts stylesheet). Every static
-// weight/style pair that ships in that folder is registered here so the rest
-// of the app can simply use font-weight utilities and get the matching cut.
+// Two families, one per script. Bricolage Grotesque carries the Latin text:
+// its width axis lets the name be set tall and condensed in the hero, and its
+// slightly wonky shapes keep the page from feeling corporate. Noto Sans
+// Arabic carries Sorani in matching weights, and covers the Kurdish-specific
+// letters (ڕ ڵ ێ ۆ ە). Both sit in one font stack, so mixed-script text such
+// as "Vue" inside a Sorani sentence picks the right face per glyph.
+//
+// The Open Graph images still render with the Poppins files in
+// /public/fonts (see lib/og.tsx), since they can't use next/font.
 
-export const poppins = localFont({
-  src: [
-    { path: '../../public/fonts/Poppins-Thin.ttf', weight: '100', style: 'normal' },
-    { path: '../../public/fonts/Poppins-ThinItalic.ttf', weight: '100', style: 'italic' },
-    { path: '../../public/fonts/Poppins-ExtraLight.ttf', weight: '200', style: 'normal' },
-    { path: '../../public/fonts/Poppins-ExtraLightItalic.ttf', weight: '200', style: 'italic' },
-    { path: '../../public/fonts/Poppins-Light.ttf', weight: '300', style: 'normal' },
-    { path: '../../public/fonts/Poppins-LightItalic.ttf', weight: '300', style: 'italic' },
-    { path: '../../public/fonts/Poppins-Regular.ttf', weight: '400', style: 'normal' },
-    { path: '../../public/fonts/Poppins-Italic.ttf', weight: '400', style: 'italic' },
-    { path: '../../public/fonts/Poppins-Medium.ttf', weight: '500', style: 'normal' },
-    { path: '../../public/fonts/Poppins-MediumItalic.ttf', weight: '500', style: 'italic' },
-    { path: '../../public/fonts/Poppins-SemiBold.ttf', weight: '600', style: 'normal' },
-    { path: '../../public/fonts/Poppins-SemiBoldItalic.ttf', weight: '600', style: 'italic' },
-    { path: '../../public/fonts/Poppins-Bold.ttf', weight: '700', style: 'normal' },
-    { path: '../../public/fonts/Poppins-BoldItalic.ttf', weight: '700', style: 'italic' },
-    { path: '../../public/fonts/Poppins-ExtraBold.ttf', weight: '800', style: 'normal' },
-    { path: '../../public/fonts/Poppins-ExtraBoldItalic.ttf', weight: '800', style: 'italic' },
-    { path: '../../public/fonts/Poppins-Black.ttf', weight: '900', style: 'normal' },
-    { path: '../../public/fonts/Poppins-BlackItalic.ttf', weight: '900', style: 'italic' },
-  ],
-  variable: '--font-poppins',
+export const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  axes: ['opsz', 'wdth'],
+  variable: '--font-bricolage',
   display: 'swap',
-  preload: true,
+})
+
+export const notoArabic = Noto_Sans_Arabic({
+  subsets: ['arabic'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-arabic',
+  display: 'swap',
 })

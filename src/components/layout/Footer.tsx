@@ -1,36 +1,35 @@
-import { Code2, Github, Linkedin, Mail } from 'lucide-react'
+'use client'
 
-import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
-import { allSocials } from '@/data'
+import { contactLinks } from '@/data/content'
+import { useLocale } from '@/lib/locale'
 
 export function Footer() {
+  const { t } = useLocale()
+
   return (
-    <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border">
-      <div className="max-w-6xl mx-auto">
-        <Separator className="mb-8" />
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="flex items-center space-x-2">
-            <Code2 className="h-6 w-6 text-primary" />
-            <span>© 2025 Ali Barznji. All rights reserved.</span>
-          </div>
-          <div className="flex space-x-4">
-            <Button variant="ghost" size="icon" asChild>
-              <a href={allSocials.github.link} target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href={allSocials.linkedin.link} target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href={`mailto:${allSocials.email.link}`}>
-                <Mail className="h-5 w-5" />
-              </a>
-            </Button>
-          </div>
+    <footer className="border-t border-border py-10">
+      <div className="mx-auto flex max-w-6xl flex-col px-4 sm:px-6 lg:px-8 gap-4 text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <span>{t.footer}</span>
+        <div className="flex gap-6" dir="ltr">
+          <a
+            href={contactLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground"
+          >
+            GitHub
+          </a>
+          <a
+            href={contactLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground"
+          >
+            LinkedIn
+          </a>
+          <a href={`mailto:${contactLinks.email}`} className="hover:text-foreground">
+            {contactLinks.email}
+          </a>
         </div>
       </div>
     </footer>

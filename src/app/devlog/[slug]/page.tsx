@@ -11,6 +11,8 @@ import {
 import { estimateReadingTime, extractHeadings, stripLeadingHeading } from '@/lib/markdown'
 import { siteUrl } from '@/lib/site'
 import { Breadcrumbs } from '@/components/devlog/Breadcrumbs'
+import { DevlogBand, Rise } from '@/components/devlog/DevlogBand'
+import { ReadingProgress } from '@/components/devlog/ReadingProgress'
 import { TagList } from '@/components/devlog/TagList'
 import { DevlogNav } from '@/components/devlog/DevlogNav'
 import { TableOfContentsMobile, TableOfContentsDesktop } from '@/components/devlog/TableOfContents'
@@ -95,66 +97,79 @@ export default async function DevlogEntryPage({ params }: { params: Promise<{ sl
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+    <div dir="ltr" lang="en">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
+      <ReadingProgress />
 
-      <Breadcrumbs title={frontmatter.title} />
+      <DevlogBand>
+        <Rise>
+          <Breadcrumbs title={frontmatter.title} />
+        </Rise>
+        <Rise>
+          <h1 className="max-w-[18ch] text-[clamp(2.75rem,7vw,5.75rem)] leading-[0.92] font-extrabold tracking-[-0.035em] [font-stretch:78%]">
+            {frontmatter.title}
+          </h1>
+        </Rise>
+        <Rise>
+          <p className="mt-6 text-base font-bold text-on-band-muted">
+            {formattedDate && <time dateTime={frontmatter.date}>{formattedDate}</time>}
+            {formattedDate && ', '}
+            {readingTime} min read
+          </p>
+          {frontmatter.summary && (
+            <p className="mt-4 max-w-[38rem] text-lg text-on-band-muted md:text-xl">
+              {frontmatter.summary}
+            </p>
+          )}
+        </Rise>
+        <Rise className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+          {frontmatter.liveUrl && (
+            <a
+              href={frontmatter.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-pom px-5 py-2.5 font-bold text-ink transition-transform hover:-translate-y-0.5 hover:rotate-[-1.5deg]"
+            >
+              Open the app
+              <ExternalLink size={16} aria-hidden />
+            </a>
+          )}
+          <TagList tags={frontmatter.tags} onBand />
+        </Rise>
+      </DevlogBand>
 
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:items-start lg:gap-12">
-        <article className="min-w-0">
-          <header className="mb-8">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{frontmatter.title}</h1>
-
-            <div className="mt-3 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-              {formattedDate && <time dateTime={frontmatter.date}>{formattedDate}</time>}
-              {formattedDate && <span aria-hidden>·</span>}
-              <span>{readingTime} min read</span>
-            </div>
-
-            {frontmatter.summary && (
-              <p className="mt-4 text-lg text-muted-foreground">{frontmatter.summary}</p>
+      <div className="mx-auto max-w-6xl px-4 pt-14 pb-16 sm:px-6 md:pt-20 lg:px-8">
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_240px] lg:items-start lg:gap-16">
+          <article className="min-w-0">
+            {frontmatter.video && (
+              <div className="mb-14 me-3 rounded-2xl shadow-[12px_12px_0_var(--saffron)]">
+                <YouTubeEmbed url={frontmatter.video} title={frontmatter.title} />
+              </div>
             )}
 
-            <TagList tags={frontmatter.tags} className="mt-5" />
+            <TableOfContentsMobile headings={headings} />
 
-            {frontmatter.liveUrl && (
-              <a
-                href={frontmatter.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            {body.trim() ? (
+              <div
+                className="devlog-prose prose prose-lg max-w-[44rem] dark:prose-invert"
+                style={{ '--link-accent': 'var(--saffron)' } as React.CSSProperties}
               >
-                View live app
-                <ExternalLink size={14} aria-hidden />
-              </a>
+                <MarkdownContent content={body} />
+              </div>
+            ) : (
+              <p className="text-muted-foreground">This entry doesn&apos;t have any content yet.</p>
             )}
-          </header>
 
-          {frontmatter.video && (
-            <div className="mb-10">
-              <YouTubeEmbed url={frontmatter.video} title={frontmatter.title} />
-            </div>
-          )}
+            <DevlogNav previous={previous} next={next} />
+          </article>
 
-          <TableOfContentsMobile headings={headings} />
-
-          {body.trim() ? (
-            <div className="prose prose-neutral max-w-none dark:prose-invert">
-              <MarkdownContent content={body} />
-            </div>
-          ) : (
-            <p className="text-muted-foreground">This entry doesn&apos;t have any content yet.</p>
-          )}
-
-          <DevlogNav previous={previous} next={next} />
-        </article>
-
-        <aside>
-          <TableOfContentsDesktop headings={headings} />
-        </aside>
+          <aside>
+            <TableOfContentsDesktop headings={headings} />
+          </aside>
+        </div>
       </div>
     </div>
   )

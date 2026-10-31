@@ -2,22 +2,30 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { MotionConfig } from 'framer-motion'
 
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ActiveSectionContext } from '@/lib/active-section-context'
 import { useScrollSpy } from '@/lib/useScrollSpy'
-import { navLinks } from '@/data'
+import type { INavLink } from '@/types'
+
+export const navLinks: INavLink[] = [
+  { key: 'work', href: '#work' },
+  { key: 'experience', href: '#experience' },
+  { key: 'contact', href: '#contact' },
+  { key: 'devlog', href: '/devlog', link: true },
+]
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [isDark, setIsDark] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('home')
+  const [activeSection, setActiveSection] = useState('')
   const pathname = usePathname()
   const isHome = pathname === '/'
 
-  // The in-page anchor sections (Home/About/Projects/...) only exist on the
-  // home page — the Devlog nav item is a real route, not a scroll target.
+  // The in-page anchor sections only exist on the home page — the Devlog
+  // nav item is a real route, not a scroll target.
   const sectionIds = useMemo(
     () => navLinks.filter((link) => !link.link).map((link) => link.href.replace('#', '')),
     [],
@@ -56,24 +64,27 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   }, [isDark])
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header
-        activeSection={activeSection}
-        isDark={isDark}
-        isMenuOpen={isMenuOpen}
-        onSetTheme={setIsDark}
-        onToggleMenu={() => setIsMenuOpen((open) => !open)}
-        onCloseMenu={() => setIsMenuOpen(false)}
-        onNavigateToSection={setActiveSection}
-      />
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen bg-background text-foreground">
+        <Header
+          links={navLinks}
+          activeSection={activeSection}
+          isDark={isDark}
+          isMenuOpen={isMenuOpen}
+          onSetTheme={setIsDark}
+          onToggleMenu={() => setIsMenuOpen((open) => !open)}
+          onCloseMenu={() => setIsMenuOpen(false)}
+          onNavigateToSection={setActiveSection}
+        />
 
-      <main>
-        <ActiveSectionContext.Provider value={setActiveSection}>
-          {children}
-        </ActiveSectionContext.Provider>
-      </main>
+        <main>
+          <ActiveSectionContext.Provider value={setActiveSection}>
+            {children}
+          </ActiveSectionContext.Provider>
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </MotionConfig>
   )
 }

@@ -32,7 +32,7 @@ export function MarkdownImage({
   }
 
   return (
-    <figure className="my-6">
+    <figure className="my-10">
       {/* eslint-disable-next-line @next/next/no-img-element -- markdown images
           have unknown, arbitrary intrinsic dimensions, so next/image's
           required sizing model doesn't apply cleanly here. */}
@@ -43,10 +43,12 @@ export function MarkdownImage({
         loading="lazy"
         decoding="async"
         onError={() => setFailed(true)}
-        className="mx-auto max-w-full rounded-xl border border-border"
+        className="mx-auto max-w-full rounded-2xl shadow-[10px_10px_0_color-mix(in_oklab,var(--grape)_35%,transparent)] ring-1 ring-border"
       />
       {title && (
-        <figcaption className="mt-2 text-center text-sm text-muted-foreground">{title}</figcaption>
+        <figcaption className="mt-4 text-center text-sm font-semibold text-muted-foreground">
+          {title}
+        </figcaption>
       )}
     </figure>
   )

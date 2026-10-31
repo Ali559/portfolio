@@ -28,14 +28,14 @@ export function loadOgAssets() {
       readFile(join(process.cwd(), 'public/fonts/Poppins-Regular.ttf')),
       readFile(join(process.cwd(), 'public/fonts/Poppins-SemiBold.ttf')),
       readFile(join(process.cwd(), 'public/fonts/Poppins-Bold.ttf')),
-      readFile(join(process.cwd(), 'public/img/avatar.jpg')),
+      readFile(join(process.cwd(), 'public/img/avatar-square.png')),
     ]).then(([regular, semibold, bold, avatar]) => ({
       fonts: [
         { name: 'Poppins' as const, data: regular, weight: 400 as const, style: 'normal' as const },
         { name: 'Poppins' as const, data: semibold, weight: 600 as const, style: 'normal' as const },
         { name: 'Poppins' as const, data: bold, weight: 700 as const, style: 'normal' as const },
       ],
-      avatarSrc: `data:image/jpeg;base64,${avatar.toString('base64')}`,
+      avatarSrc: `data:image/png;base64,${avatar.toString('base64')}`,
     }))
   }
   return cachedAssets

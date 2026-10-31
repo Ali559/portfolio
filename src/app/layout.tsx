@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { SiteShell } from '@/components/layout/SiteShell'
-import { allSocials } from '@/data'
-import { poppins } from '@/lib/fonts'
+import { contactLinks } from '@/data/content'
+import { bricolage, notoArabic } from '@/lib/fonts'
+import { LocaleProvider } from '@/lib/locale'
 import { siteUrl } from '@/lib/site'
 
 const title = 'Ali Barznji — Software Engineer'
 const description =
-  'Portfolio of Ali Barznji, a full stack developer with 7 years of experience building scalable web applications with React, Vue, Node.js, Go, and .NET'
+  'Portfolio of Ali Barznji, a software engineer who builds backends for Lalengi and Codex Solutions, and tools for students in Kurdistan.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -52,9 +53,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/img/avatar.jpg',
-        width: 1200,
-        height: 1200,
+        url: '/img/avatar-square.png',
+        width: 768,
+        height: 768,
         alt: 'Ali Barznji',
       },
     ],
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description,
-    images: ['/img/avatar.jpg'],
+    images: ['/img/avatar-square.png'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -74,8 +75,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+    { media: '(prefers-color-scheme: light)', color: '#fbfaff' },
+    { media: '(prefers-color-scheme: dark)', color: '#110a2e' },
   ],
 }
 
@@ -84,10 +85,10 @@ const personJsonLd = {
   '@type': 'Person',
   name: 'Ali Barznji',
   url: siteUrl,
-  image: `${siteUrl}/img/avatar.jpg`,
-  jobTitle: 'Full Stack Developer',
-  email: `mailto:${allSocials.email.link}`,
-  sameAs: [`https://${allSocials.github.link}`, `https://${allSocials.linkedin.link}`],
+  image: `${siteUrl}/img/avatar-square.png`,
+  jobTitle: 'Software Engineer',
+  email: `mailto:${contactLinks.email}`,
+  sameAs: [contactLinks.github, contactLinks.linkedin],
   knowsAbout: [
     'TypeScript',
     'JavaScript',
@@ -104,7 +105,11 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={poppins.variable}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${bricolage.variable} ${notoArabic.variable}`}
+    >
       <head>
         <script
           type="application/ld+json"
@@ -114,7 +119,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="antialiased">
-        <SiteShell>{children}</SiteShell>
+        <LocaleProvider>
+          <SiteShell>{children}</SiteShell>
+        </LocaleProvider>
       </body>
     </html>
   )

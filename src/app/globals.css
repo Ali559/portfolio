@@ -3,112 +3,68 @@
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:is(.dark *));
 
+/* ─── Palette ────────────────────────────────────────────────────────────────
+   Kurdish kilim colours at full strength: grape, pomegranate, saffron and
+   jade on an ink ground. Each project owns one of them. The surface tokens
+   follow shadcn's names so the devlog keeps working unchanged. */
+
 :root {
-  --background: oklch(0.9842 0.0034 247.8575);
-  --foreground: oklch(0.2795 0.0368 260.031);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2795 0.0368 260.031);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2795 0.0368 260.031);
-  --primary: oklch(0.5854 0.2041 277.1173);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.9276 0.0058 264.5313);
-  --secondary-foreground: oklch(0.3729 0.0306 259.7328);
-  --muted: oklch(0.967 0.0029 264.5419);
-  --muted-foreground: oklch(0.551 0.0234 264.3637);
-  --accent: oklch(0.9299 0.0334 272.7879);
-  --accent-foreground: oklch(0.3729 0.0306 259.7328);
-  --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.8717 0.0093 258.3382);
-  --input: oklch(0.8717 0.0093 258.3382);
-  --ring: oklch(0.5854 0.2041 277.1173);
-  --chart-1: oklch(0.5854 0.2041 277.1173);
-  --chart-2: oklch(0.5106 0.2301 276.9656);
-  --chart-3: oklch(0.4568 0.2146 277.0229);
-  --chart-4: oklch(0.3984 0.1773 277.3662);
-  --chart-5: oklch(0.3588 0.1354 278.6973);
-  --sidebar: oklch(0.967 0.0029 264.5419);
-  --sidebar-foreground: oklch(0.2795 0.0368 260.031);
-  --sidebar-primary: oklch(0.5854 0.2041 277.1173);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.9299 0.0334 272.7879);
-  --sidebar-accent-foreground: oklch(0.3729 0.0306 259.7328);
-  --sidebar-border: oklch(0.8717 0.0093 258.3382);
-  --sidebar-ring: oklch(0.5854 0.2041 277.1173);
-  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-poppins), ui-serif, serif;
+  --ink: #170f3b;
+  --paper: #fbfaff;
+  --grape: #5b3df5;
+  --pom: #ff4673;
+  --saffron: #ffc22e;
+  --jade: #19c9b0;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--ink);
+  --primary: var(--grape);
+  --primary-foreground: #ffffff;
+  --secondary: #efecfb;
+  --secondary-foreground: var(--ink);
+  --muted: #efecfb;
+  --muted-foreground: #5a5378;
+  --accent: #ece8ff;
+  --accent-foreground: var(--ink);
+  --destructive: #d92d4f;
+  --destructive-foreground: #ffffff;
+  --border: #e2ddf3;
+  --input: #e2ddf3;
+  --ring: var(--grape);
+  --band: var(--ink);
+  --on-band: var(--paper);
+  --on-band-muted: #b9b2dc;
+  --font-sans: var(--font-bricolage), var(--font-arabic), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-sans);
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-  --radius: 0.5rem;
-  --shadow-x: 0px;
-  --shadow-y: 4px;
-  --shadow-blur: 8px;
-  --shadow-spread: -1px;
-  --shadow-opacity: 0.1;
-  --shadow-color: hsl(0 0% 0%);
-  --shadow-2xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
-  --shadow-xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 1px 2px -2px hsl(0 0% 0% / 0.1);
-  --shadow: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 1px 2px -2px hsl(0 0% 0% / 0.1);
-  --shadow-md: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 2px 4px -2px hsl(0 0% 0% / 0.1);
-  --shadow-lg: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 4px 6px -2px hsl(0 0% 0% / 0.1);
-  --shadow-xl: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 8px 10px -2px hsl(0 0% 0% / 0.1);
-  --shadow-2xl: 0px 4px 8px -1px hsl(0 0% 0% / 0.25);
-  --tracking-normal: 0em;
-  --spacing: 0.25rem;
+  --radius: 0.75rem;
 }
 
 .dark {
-  --background: oklch(0.2077 0.0398 265.7549);
-  --foreground: oklch(0.9288 0.0126 255.5078);
-  --card: oklch(0.2795 0.0368 260.031);
-  --card-foreground: oklch(0.9288 0.0126 255.5078);
-  --popover: oklch(0.2795 0.0368 260.031);
-  --popover-foreground: oklch(0.9288 0.0126 255.5078);
-  --primary: oklch(0.6801 0.1583 276.9349);
-  --primary-foreground: oklch(0.2077 0.0398 265.7549);
-  --secondary: oklch(0.3351 0.0331 260.912);
-  --secondary-foreground: oklch(0.8717 0.0093 258.3382);
-  --muted: oklch(0.2427 0.0381 259.9437);
-  --muted-foreground: oklch(0.7137 0.0192 261.3246);
-  --accent: oklch(0.3729 0.0306 259.7328);
-  --accent-foreground: oklch(0.8717 0.0093 258.3382);
-  --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: oklch(0.2077 0.0398 265.7549);
-  --border: oklch(0.4461 0.0263 256.8018);
-  --input: oklch(0.4461 0.0263 256.8018);
-  --ring: oklch(0.6801 0.1583 276.9349);
-  --chart-1: oklch(0.6801 0.1583 276.9349);
-  --chart-2: oklch(0.5854 0.2041 277.1173);
-  --chart-3: oklch(0.5106 0.2301 276.9656);
-  --chart-4: oklch(0.4568 0.2146 277.0229);
-  --chart-5: oklch(0.3984 0.1773 277.3662);
-  --sidebar: oklch(0.2795 0.0368 260.031);
-  --sidebar-foreground: oklch(0.9288 0.0126 255.5078);
-  --sidebar-primary: oklch(0.6801 0.1583 276.9349);
-  --sidebar-primary-foreground: oklch(0.2077 0.0398 265.7549);
-  --sidebar-accent: oklch(0.3729 0.0306 259.7328);
-  --sidebar-accent-foreground: oklch(0.8717 0.0093 258.3382);
-  --sidebar-border: oklch(0.4461 0.0263 256.8018);
-  --sidebar-ring: oklch(0.6801 0.1583 276.9349);
-  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-poppins), ui-serif, serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-  --radius: 0.5rem;
-  --shadow-x: 0px;
-  --shadow-y: 4px;
-  --shadow-blur: 8px;
-  --shadow-spread: -1px;
-  --shadow-opacity: 0.1;
-  --shadow-color: hsl(0 0% 0%);
-  --shadow-2xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
-  --shadow-xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 1px 2px -2px hsl(0 0% 0% / 0.1);
-  --shadow: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 1px 2px -2px hsl(0 0% 0% / 0.1);
-  --shadow-md: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 2px 4px -2px hsl(0 0% 0% / 0.1);
-  --shadow-lg: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 4px 6px -2px hsl(0 0% 0% / 0.1);
-  --shadow-xl: 0px 4px 8px -1px hsl(0 0% 0% / 0.1), 0px 8px 10px -2px hsl(0 0% 0% / 0.1);
-  --shadow-2xl: 0px 4px 8px -1px hsl(0 0% 0% / 0.25);
+  --background: #110a2e;
+  --foreground: #f3f0ff;
+  --card: #1b1342;
+  --card-foreground: #f3f0ff;
+  --popover: #1b1342;
+  --popover-foreground: #f3f0ff;
+  --primary: #a996ff;
+  --primary-foreground: #110a2e;
+  --secondary: #221852;
+  --secondary-foreground: #f3f0ff;
+  --muted: #1d1448;
+  --muted-foreground: #b0a8d4;
+  --accent: #251a58;
+  --accent-foreground: #f3f0ff;
+  --destructive: #ff7a92;
+  --destructive-foreground: #110a2e;
+  --border: #2c2260;
+  --input: #2c2260;
+  --ring: #a996ff;
+  --band: #0b0620;
 }
 
 @theme inline {
@@ -131,19 +87,15 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --color-band: var(--band);
+  --color-on-band: var(--on-band);
+  --color-on-band-muted: var(--on-band-muted);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-grape: var(--grape);
+  --color-pom: var(--pom);
+  --color-saffron: var(--saffron);
+  --color-jade: var(--jade);
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
@@ -154,25 +106,85 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --shadow-2xs: var(--shadow-2xs);
-  --shadow-xs: var(--shadow-xs);
-  --shadow-sm: var(--shadow-sm);
-  --shadow: var(--shadow);
-  --shadow-md: var(--shadow-md);
-  --shadow-lg: var(--shadow-lg);
-  --shadow-xl: var(--shadow-xl);
-  --shadow-2xl: var(--shadow-2xl);
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-kilim: kilim-slide 6s linear infinite;
+  --animate-spin-slow: spin 60s linear infinite;
+  --animate-bob: bob 6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes kilim-slide {
+  to {
+    background-position-x: 72px;
+  }
+}
+@keyframes bob {
+  50% {
+    transform: translateY(-10px) rotate(var(--bob-rotate, 4deg));
+  }
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-size: 106.25%;
+  }
+  /* Noto Sans Arabic has a smaller x-height than Bricolage; scale the page
+     up slightly in Sorani so both languages read at the same size. */
+  html[lang='ckb'] {
+    font-size: 114%;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
     font-optical-sizing: auto;
+    line-height: 1.6;
   }
+  [lang='ckb'] {
+    line-height: 1.9;
+  }
+  ::selection {
+    background: var(--saffron);
+    color: var(--ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+}
+
+/* Text links: a thick underline in the surrounding accent that fills in
+   behind the text on hover. `--link-accent` is set per panel. */
+.ink-link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(
+    var(--link-accent, var(--saffron)),
+    var(--link-accent, var(--saffron))
+  );
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.18em;
+  transition: background-size 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  padding-inline: 0.05em;
+}
+.ink-link:hover {
+  background-size: 100% 100%;
+  color: var(--ink);
+}
+
+/* A woven strip of kilim diamonds, used as a divider on the colour bands. */
+.kilim-strip {
+  height: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 48 24'%3E%3Crect width='48' height='24' fill='%23170f3b'/%3E%3Cpath d='M12 2 22 12 12 22 2 12Z' fill='%23ffc22e'/%3E%3Cpath d='M12 7 17 12 12 17 7 12Z' fill='%23ff4673'/%3E%3Cpath d='M36 2 46 12 36 22 26 12Z' fill='%2319c9b0'/%3E%3Cpath d='M36 8 40 12 36 16 32 12Z' fill='%23fbfaff'/%3E%3Cpath d='M24 0 27 3 24 6 21 3ZM24 18 27 21 24 24 21 21Z' fill='%235b3df5'/%3E%3C/svg%3E");
+  background-size: 72px 36px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -180,8 +192,79 @@
     scroll-behavior: smooth;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-kilim,
+  .animate-spin-slow,
+  .animate-bob {
+    animation: none;
+  }
+  .packet {
+    display: none;
+  }
+}
 
 /* ─── Devlog Markdown ────────────────────────────────────────────────────── */
+
+/* Article type in the same voice as the rest of the site: condensed,
+   extra-bold headings, each h2 led by a small pomegranate diamond. */
+.devlog-prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-bullets: var(--pom);
+  --tw-prose-counters: var(--pom);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--foreground);
+  --tw-prose-quote-borders: var(--pom);
+  --tw-prose-invert-body: var(--foreground);
+  --tw-prose-invert-headings: var(--foreground);
+  --tw-prose-invert-bold: var(--foreground);
+  --tw-prose-invert-bullets: var(--pom);
+  --tw-prose-invert-counters: var(--pom);
+  --tw-prose-invert-quotes: var(--foreground);
+}
+.devlog-prose :where(h2, h3, h4) {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  font-stretch: 82%;
+  line-height: 1.05;
+}
+.devlog-prose :where(h2) {
+  font-size: 2.1em;
+  margin-top: 1.8em;
+}
+.devlog-prose :where(h2)::before {
+  content: '';
+  display: inline-block;
+  width: 0.42em;
+  height: 0.42em;
+  margin-inline-end: 0.45em;
+  vertical-align: 0.14em;
+  rotate: 45deg;
+  border-radius: 2px;
+  background: var(--pom);
+}
+.devlog-prose :where(h3) {
+  font-size: 1.45em;
+}
+.devlog-prose :where(blockquote) {
+  border-inline-start-width: 6px;
+  border-radius: 0 1rem 1rem 0;
+  background: color-mix(in oklab, var(--pom) 10%, transparent);
+  padding: 0.6em 1.2em;
+  font-style: normal;
+  font-weight: 600;
+}
+.devlog-prose :where(blockquote p:first-of-type)::before,
+.devlog-prose :where(blockquote p:last-of-type)::after {
+  content: none;
+}
+.devlog-prose figure[data-rehype-pretty-code-figure] {
+  border: 0;
+  box-shadow: 10px 10px 0 color-mix(in oklab, var(--grape) 35%, transparent);
+  margin-inline-end: 10px;
+}
 
 /* Drop the decorative backtick characters Tailwind Typography adds around
    inline `code`; a padded pill reads cleaner in a code-heavy devlog. */
@@ -192,9 +275,11 @@
 
 .prose :where(code):not(:where([data-rehype-pretty-code-figure] *)) {
   border-radius: 0.375rem;
-  background-color: var(--color-muted);
+  background-color: color-mix(in oklab, var(--grape) 12%, transparent);
   padding: 0.15em 0.4em;
-  font-weight: 500;
+  font-weight: 600;
+  /* Long identifiers wrap instead of pushing the page wider on phones. */
+  overflow-wrap: anywhere;
 }
 
 /* rehype-pretty-code figure/pre/code — unstyled by design, styled here.
@@ -204,7 +289,7 @@
    must never apply to those, or inline code breaks onto its own line. */
 figure[data-rehype-pretty-code-figure] {
   margin: 1.75em 0;
-  border-radius: var(--radius-xl);
+  border-radius: 1rem;
   border: 1px solid var(--color-border);
   overflow: hidden;
 }
@@ -272,8 +357,8 @@ figure[data-rehype-pretty-code-figure] [data-line] {
 }
 
 figure[data-rehype-pretty-code-figure] [data-highlighted-line] {
-  background-color: var(--color-accent);
-  border-left-color: var(--color-primary);
+  background-color: color-mix(in oklab, var(--pom) 12%, transparent);
+  border-left-color: var(--pom);
 }
 
 figure[data-rehype-pretty-code-figure] [data-highlighted-chars] {
