@@ -72,6 +72,24 @@ const diagrams: Record<NonNullable<CaseStudy['diagram']>, Diagram> = {
       { from: 'redis', to: 'push', built: true },
     ],
   },
+  qasa: {
+    nodes: [
+      { id: 'apps', label: 'iOS, Android', x: 16, y: 144, w: 132, built: true },
+      { id: 'api', label: 'Rust API', x: 196, y: 64, w: 128, built: true },
+      { id: 'worker', label: 'Worker', x: 196, y: 224, w: 128, built: true },
+      { id: 'pg', label: 'PostgreSQL', x: 372, y: 24, w: 172 },
+      { id: 'vpn', label: 'VPN agent', x: 372, y: 144, w: 172, built: true },
+      { id: 'wallets', label: 'Iraqi wallets', x: 372, y: 264, w: 172 },
+    ],
+    edges: [
+      { from: 'apps', to: 'api', both: true, built: true },
+      { from: 'apps', to: 'vpn', built: true },
+      { from: 'api', to: 'pg', both: true, built: true },
+      { from: 'api', to: 'vpn', both: true, built: true },
+      { from: 'worker', to: 'pg', both: true, built: true },
+      { from: 'worker', to: 'wallets', built: true },
+    ],
+  },
   inzpiri: {
     group: { label: 'AWS', x: 168, y: 34, w: 376, h: 276 },
     nodes: [

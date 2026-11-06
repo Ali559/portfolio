@@ -19,7 +19,9 @@ export interface CaseStudy {
   story: string
   stack: string[]
   image?: { src: string; width: number; height: number }
-  diagram?: 'lalengi' | 'codex' | 'inzpiri' | 'seeyou' | 'smart-pricer'
+  /** A phone screen of the app, shown behind the diagram. */
+  phone?: { src: string; width: number; height: number }
+  diagram?: 'lalengi' | 'codex' | 'qasa' | 'inzpiri' | 'seeyou' | 'smart-pricer'
   links: { label: string; href: string }[]
 }
 
@@ -68,7 +70,7 @@ const en: SiteContent = {
   theme: { toDark: 'Switch to dark theme', toLight: 'Switch to light theme' },
   menu: { open: 'Open menu', close: 'Close menu' },
   hero: {
-    lede: "I'm a software engineer, mostly on the backend. I designed and built the backend of Lalengi, a super app for food, rides and deliveries, and I work on client projects at Codex Solutions. In my own time I make tools for students in Kurdistan, where I'm from.",
+    lede: "I'm a software engineer, mostly on the backend. I designed and built the backend of Lalengi, a super app for food, rides and deliveries, and I work on client projects at Codex Solutions. In my own time I'm building Qasa, a password manager for Iraq, and tools for students in Kurdistan, where I'm from.",
     emailMe: 'Email me',
     seeWork: 'See selected work',
   },
@@ -96,6 +98,20 @@ const en: SiteContent = {
           "On one of Codex's client projects I took the backend from a single app to four processes: the REST API, a Socket.IO gateway, a push notification service and a cron service, all talking through Redis queues. Along the way I added Redis caching and dependency injection throughout, so each part can be deployed and scaled separately.",
         stack: ['NestJS', 'Redis', 'BullMQ', 'Socket.IO'],
         links: [{ label: 'Visit Codex', href: 'https://codexsolutions.io/' }],
+      },
+      {
+        id: 'qasa',
+        diagram: 'qasa',
+        phone: { src: '/img/projects/qasa-en.webp', width: 600, height: 1304 },
+        name: 'Qasa',
+        summary: 'A password manager for iOS and Android whose vault never leaves the phone.',
+        story:
+          "Qasa is my own product, paid for through Iraqi wallets. Every password is encrypted on the device and stays there. The Rust server never sees the vault: it only meters devices and sells Premium, which adds a WireGuard VPN, more devices and a breached-password check. I built all of it: the Axum API and its worker, the agent that keeps each VPN node's peers in sync, the native iOS and Android apps and a Vue admin dashboard.",
+        stack: ['Rust', 'PostgreSQL', 'SwiftUI', 'Kotlin', 'WireGuard'],
+        links: [
+          { label: 'Visit Qasa', href: 'https://qasa-app.com' },
+          { label: 'Source', href: 'https://github.com/Ali559/Qasa' },
+        ],
       },
       {
         id: 'zankoline',
@@ -220,7 +236,7 @@ const ckb: SiteContent = {
   theme: { toDark: 'گۆڕین بۆ ڕووکاری تاریک', toLight: 'گۆڕین بۆ ڕووکاری ڕووناک' },
   menu: { open: 'کردنەوەی لیست', close: 'داخستنی لیست' },
   hero: {
-    lede: 'من ئەندازیاری نەرمەکاڵام و زیاتر لەسەر باکئێند کار دەکەم. باکئێندی Lalengi م دیزاین کرد و دروستم کرد، سوپەر ئەپێک بۆ خواردن و تاکسی و گەیاندن، و لە Codex Solutions لەسەر پرۆژەی کڕیارەکان کار دەکەم. لە کاتی خۆمدا ئامراز بۆ قوتابیانی کوردستان دروست دەکەم، کە نیشتمانی خۆمە.',
+    lede: 'من ئەندازیاری نەرمەکاڵام و زیاتر لەسەر باکئێند کار دەکەم. باکئێندی Lalengi م دیزاین کرد و دروستم کرد، سوپەر ئەپێک بۆ خواردن و تاکسی و گەیاندن، و لە Codex Solutions لەسەر پرۆژەی کڕیارەکان کار دەکەم. لە کاتی خۆمدا Qasa دروست دەکەم، بەڕێوەبەرێکی وشەی نهێنی بۆ عێراق، لەگەڵ ئامراز بۆ قوتابیانی کوردستان، کە نیشتمانی خۆمە.',
     emailMe: 'ئیمەیڵم بۆ بنێرە',
     seeWork: 'کارە هەڵبژێردراوەکان ببینە',
   },
@@ -248,6 +264,21 @@ const ckb: SiteContent = {
           'لە یەکێک لە پرۆژەکانی کڕیارانی Codex، باکئێندەکەم لە یەک ئەپەوە کرد بە چوار پرۆسێس: REST API، دەروازەیەکی Socket.IO، سێرڤیسی ئاگادارکردنەوە و سێرڤیسی cron، کە هەموویان لە ڕێگەی ڕیزەکانی Redis ـەوە قسە لەگەڵ یەکتر دەکەن. هاوکات کاشکردن بە Redis و dependency injection م لە هەموو بەشەکاندا زیاد کرد، بۆ ئەوەی هەر بەشێک بە جیا دابنرێت و گەورە بکرێت.',
         stack: ['NestJS', 'Redis', 'BullMQ', 'Socket.IO'],
         links: [{ label: 'سەردانی Codex بکە', href: 'https://codexsolutions.io/' }],
+      },
+      {
+        id: 'qasa',
+        diagram: 'qasa',
+        phone: { src: '/img/projects/qasa-ckb.webp', width: 600, height: 1304 },
+        name: 'Qasa',
+        summary:
+          'بەڕێوەبەرێکی وشەی نهێنی بۆ iOS و Android کە ڤۆڵتەکەی هەرگیز لە مۆبایلەکە دەرناچێت.',
+        story:
+          'Qasa بەرهەمی خۆمە و پارەکەی لە ڕێگەی جزدانە ئەلیکترۆنییەکانی عێراقەوە دەدرێت. هەموو وشەیەکی نهێنی لەسەر ئامێرەکە شفرە دەکرێت و هەر لەوێ دەمێنێتەوە. سێرڤەرەکەی Rust هەرگیز ڤۆڵتەکە نابینێت: تەنها ئامێرەکان دەژمێرێت و Premium دەفرۆشێت، کە VPN ی WireGuard و ئامێری زیاتر و پشکنینی وشە نهێنییە دزەکراوەکان زیاد دەکات. هەمووی خۆم دروستم کرد: API ی Axum و workerەکەی، ئەو agentـەی لیستی peerەکانی هەر سێرڤەرێکی VPN ڕێک دەخات، ئەپە ڕەسەنەکانی iOS و Android و داشبۆردێکی بەڕێوەبردن بە Vue.',
+        stack: ['Rust', 'PostgreSQL', 'SwiftUI', 'Kotlin', 'WireGuard'],
+        links: [
+          { label: 'سەردانی Qasa بکە', href: 'https://qasa-app.com' },
+          { label: 'کۆد', href: 'https://github.com/Ali559/Qasa' },
+        ],
       },
       {
         id: 'zankoline',

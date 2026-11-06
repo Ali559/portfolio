@@ -37,6 +37,12 @@ const themes: Record<string, Theme> = {
     accent: '#5b3df5',
     accentText: '#ffffff',
   },
+  qasa: {
+    panel: 'bg-ink text-paper ring-1 ring-paper/10 dark:bg-card',
+    link: 'var(--jade)',
+    accent: '#4edea3',
+    accentText: '#170f3b',
+  },
   zankoline: { panel: 'bg-grape text-paper', link: 'var(--saffron)', accent: '', accentText: '' },
   inzpiri: {
     panel: 'bg-saffron text-ink',
@@ -157,6 +163,30 @@ function Visual({ item, theme, legend }: { item: CaseStudy; theme: Theme; legend
       accentText={theme.accentText}
     />
   )
+
+  // A phone showing the app behind, with the system drawn over it.
+  if (item.phone) {
+    return (
+      <div className="relative py-4">
+        <div
+          dir="ltr"
+          className="w-[34%] rotate-[-4deg] overflow-hidden rounded-[1.75rem] bg-ink p-1.5 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.7)] ring-1 ring-paper/20"
+        >
+          <Image
+            src={item.phone.src}
+            alt=""
+            width={item.phone.width}
+            height={item.phone.height}
+            sizes="(min-width: 1024px) 14rem, 34vw"
+            className="h-auto w-full rounded-[1.4rem]"
+          />
+        </div>
+        <div className="absolute end-0 top-1/2 w-[78%] -translate-y-1/2 rotate-[1.5deg]">
+          {diagram}
+        </div>
+      </div>
+    )
+  }
 
   // A screenshot of the client's site behind, with the system drawn over it.
   if (item.image) {
